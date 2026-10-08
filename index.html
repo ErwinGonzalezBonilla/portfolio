@@ -1,538 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="Erwin González Bonilla · Full Stack Developer">
-<meta property="og:description" content="Portfolio con proyectos en React, Python, IA y automatización con n8n.">
-<meta property="og:image" content="/img/og.jpg">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="apple-touch-icon" href="img/favicon.png">
-<title>Erwin González Bonilla</title>
-<meta name="description" content="Full Stack Developer en Madrid. Proyectos con React, Python, OpenAI y n8n.">
+<title>¡Salvador cumple 5 años! 🎈</title>
+<meta name="description" content="Domingo 11 de octubre · Kids Park (Av. Salesianos 71, San Joaquín) · de 14:00 a 17:00. ¡Te esperamos!">
+<meta property="og:title" content="¡Salvador cumple 5 años! 🎈">
+<meta property="og:description" content="Domingo 11 de octubre en Kids Park, de 14:00 a 17:00. Confirma tu asistencia aquí.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto}
+  :root {
+    --sky: #8ED8FF;
+    --sky-deep: #4FB6F0;
+    --sun: #FFD23F;
+    --tomato: #FF5A4E;
+    --grass: #2FBF71;
+    --ink: #1D2B53;
+    --card: #FFFFFF;
+    --wa: #25D366;
+    --wa-dark: #128C4A;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --sky: #1B3F6B;
+      --sky-deep: #12305A;
+      --card: #FFFDF6;
+    }
+  }
+  :root[data-theme="dark"] { --sky: #1B3F6B; --sky-deep: #12305A; --card: #FFFDF6; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--sky);
+    background-image: radial-gradient(circle at 20% 10%, rgba(255,255,255,.35) 0 60px, transparent 61px),
+                      radial-gradient(circle at 85% 25%, rgba(255,255,255,.3) 0 45px, transparent 46px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 40px;
+    overflow-x: hidden;
+  }
+  .confetti { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+  .confetti span {
+    position: absolute; top: -20px; width: 10px; height: 16px; border-radius: 3px;
+    animation: fall linear infinite;
+  }
+  @keyframes fall { to { transform: translateY(110vh) rotate(540deg); } }
+  @media (prefers-reduced-motion: reduce) { .confetti { display: none; } .balloon { animation: none !important; } }
 
-/* Layout: hero con foto + cifras reales de GitHub; proyecto destacado a ancho completo, el resto en rejilla de 2; trayectoria como línea temporal; contacto al pie */
-:root{
-  --bg:#ECEAE4; --surface:#F7F6F2; --ink:#1B2836; --muted:#5B6676; --line:#D4D1C9;
-  --accent:#4C6488; --accent-soft:#DCE2EA; --navy:#1B2A3A; --ok:#1F8A55; --ok-soft:#DDF1E6; --wip:#8A5A00; --wip-soft:#FBEBC8;
-  --display:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;
-  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111922; --surface:#18222E; --ink:#ECEAE4; --muted:#9BA6B5; --line:#2A3544;
-  --accent:#9FB4D3; --accent-soft:#22303F; --navy:#DCE2EA; --ok:#5FD397; --ok-soft:#15372A; --wip:#F2C35B; --wip-soft:#3A2F14; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#111922; --surface:#18222E; --ink:#ECEAE4; --muted:#9BA6B5; --line:#2A3544;
-  --accent:#9FB4D3; --accent-soft:#22303F; --navy:#DCE2EA; --ok:#5FD397; --ok-soft:#15372A; --wip:#F2C35B; --wip-soft:#3A2F14; color-scheme:dark}
+  .card {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 420px;
+    background: var(--card);
+    border-radius: 36px;
+    border: 4px solid var(--ink);
+    box-shadow: 10px 12px 0 var(--ink);
+    padding: 28px 24px 30px;
+    text-align: center;
+  }
+  .balloons { display: flex; justify-content: center; gap: 6px; margin: -90px auto 4px; height: 170px; }
+  .balloon { animation: bob 3.2s ease-in-out infinite; transform-origin: bottom center; }
+  .balloon:nth-child(2) { animation-delay: -1.1s; }
+  .balloon:nth-child(3) { animation-delay: -2.1s; }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
 
-*,*::before,*::after{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;padding-inline:20px;padding-block:0}
-.wrap{max-width:1080px;margin:0 auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
-.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+  .lead { font-weight: 800; font-size: 1.1rem; margin: 0 0 4px; }
+  h1 {
+    font-family: "Bagel Fat One", "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.8rem, 13vw, 3.8rem);
+    line-height: 1;
+    margin: 0;
+    color: var(--tomato);
+    -webkit-text-stroke: 2px var(--ink);
+    text-shadow: 4px 4px 0 var(--sun);
+    letter-spacing: .5px;
+  }
+  .age {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin: 14px 0 22px;
+    font-weight: 900; font-size: 1.25rem;
+  }
+  .age b {
+    font-family: "Bagel Fat One", "Nunito", sans-serif; font-weight: 400;
+    font-size: 4.2rem; line-height: .9; color: var(--sun);
+    -webkit-text-stroke: 3px var(--ink);
+    transform: rotate(-8deg); display: inline-block;
+  }
+  .details { display: grid; gap: 10px; margin: 0 0 26px; text-align: left; }
+  .row {
+    display: flex; align-items: center; gap: 14px;
+    background: #F2FAFF; border: 3px solid var(--ink); border-radius: 18px;
+    padding: 12px 14px;
+  }
+  .row:nth-child(2) { background: #FFF6D6; }
+  .row:nth-child(3) { background: #E6F8EE; }
+  .row .ico { font-size: 1.8rem; line-height: 1; }
+  .row small { display: block; font-weight: 700; font-size: .85rem; opacity: .7; }
+  .row strong { font-weight: 900; font-size: 1.15rem; }
+  .maps { color: inherit; text-decoration: none; }
+  .maps:focus-visible { outline: 4px solid var(--sun); outline-offset: 3px; }
+  .addr { display: block; font-weight: 700; font-size: .95rem; margin-top: 2px; }
+  .maplink { display: inline-block; margin-top: 6px; font-weight: 900; font-size: .9rem; color: #0B6E3A; text-decoration: underline; text-underline-offset: 3px; }
 
-/* NAV */
-nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;gap:16px;flex-wrap:wrap}
-.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.01em}
-.logo span{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.95rem}
-nav ul a{text-decoration:none;color:var(--muted)}
-nav ul a:hover{color:var(--ink)}
-
-/* HERO */
-.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center;padding-block:48px 64px}
-.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:800;letter-spacing:-.03em;margin-top:14px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.role{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2.2vw,1.45rem);margin:18px 0 0;color:var(--navy)}
-.pitch{max-width:60ch;color:var(--muted);font-size:1.06rem;margin:22px 0 28px}
-.pitch strong{color:var(--ink);font-weight:600}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;border:1.5px solid var(--ink);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--ink);color:var(--bg)}
-.portrait{position:relative;justify-self:center;width:100%;max-width:380px}
-.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;max-width:100%}
-.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--accent);border-radius:28px;z-index:-1}
-.portrait{isolation:isolate}
-.status{position:absolute;left:-14px;bottom:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:.85rem;box-shadow:0 10px 30px rgba(10,20,40,.12);display:flex;gap:10px;align-items:center}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px var(--ok-soft)}
-
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:88px}
-.stat{padding:22px 18px}
-.stat+.stat{border-left:1px solid var(--line)}
-.stat b{display:block;font-family:var(--display);font-size:2.1rem;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.stat span{color:var(--muted);font-size:.88rem}
-
-/* SECTIONS */
-section{margin-bottom:96px}
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
-.sec-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-top:8px}
-.sec-head p{color:var(--muted);max-width:46ch;margin:0}
-
-/* PROJECTS */
-.projects{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
-.card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr}
-.preview{padding:22px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;min-width:0}
-.featured .preview{padding:34px}
-.browser{width:100%;border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(10,20,40,.18);background:#fff;transition:transform .3s}
-.card:hover .browser{transform:translateY(-4px)}
-.bar{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#E9EBEF}
-.bar i{width:8px;height:8px;border-radius:50%;background:#C5CAD3}
-.bar .url{flex:1;margin-left:8px;background:#fff;border-radius:6px;font:500 10px/1 var(--mono);color:#5A6377;padding:5px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.screen{aspect-ratio:16/10;position:relative;overflow:hidden;font-family:system-ui,sans-serif;color:#1d2433}
-
-.body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:16px;flex:1;min-width:0}
-.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.pill{font:600 .72rem/1 var(--mono);padding:6px 10px;border-radius:999px;letter-spacing:.02em}
-.pill.live{background:var(--ok-soft);color:var(--ok)}
-.pill.wip{background:var(--wip-soft);color:var(--wip)}
-.pill.kind{background:transparent;border:1px solid var(--line);color:var(--muted)}
-.body h3{font-size:1.65rem;font-weight:700;letter-spacing:-.015em}
-.featured .body h3{font-size:2.1rem}
-.body p.desc{margin:0;color:var(--muted)}
-.why{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:.94rem}
-.why li{display:grid;grid-template-columns:18px 1fr;gap:8px}
-.why li::before{content:"";width:8px;height:8px;margin-top:.55em;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
-.why-title{font:600 .72rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink)}
-.stack{display:flex;flex-wrap:wrap;gap:6px}
-.stack span{font:500 .76rem/1 var(--mono);padding:6px 9px;border-radius:7px;background:var(--bg);border:1px solid var(--line)}
-.links{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
-.links a{font-weight:600;font-size:.92rem;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px}
-.links a:hover{color:var(--accent)}
-.commits{font:500 .78rem var(--mono);color:var(--muted)}
-
-/* ---- Mockups (each one imitates its own site, so it keeps its own colors in both themes) ---- */
-/* MyStock */
-.ms{display:grid;grid-template-columns:22% 1fr;height:100%;background:#F5F7FB}
-.ms-side{background:#14213D;padding:10% 10%;display:flex;flex-direction:column;gap:7%}
-.ms-side b{color:#fff;font-size:clamp(7px,1.1vw,12px);font-weight:800}
-.ms-side s{display:block;height:5%;min-height:5px;border-radius:3px;background:rgba(255,255,255,.18);text-decoration:none}
-.ms-side s.on{background:#FCA311}
-.ms-main{padding:4% 4.5%;display:grid;grid-template-rows:auto auto 1fr;gap:5%}
-.ms-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:4%}
-.ms-kpi{background:#fff;border-radius:6px;padding:7% 8%;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.ms-kpi small{display:block;font-size:clamp(5px,.75vw,9px);color:#7a8396}
-.ms-kpi strong{font-size:clamp(8px,1.4vw,16px)}
-.ms-kpi.low strong{color:#D64545}
-.ms-chart{background:#fff;border-radius:6px;padding:4%;display:flex;align-items:flex-end;gap:3%;height:clamp(40px,9vw,110px);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.ms-chart i{flex:1;background:#14213D;border-radius:2px 2px 0 0}
-.ms-chart i:nth-child(odd){background:#FCA311}
-.ms-chat{background:#fff;border-radius:6px;padding:3% 4%;display:flex;flex-direction:column;gap:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:clamp(6px,.85vw,10px)}
-.ms-chat .q{align-self:flex-end;background:#14213D;color:#fff;padding:4px 8px;border-radius:8px 8px 2px 8px}
-.ms-chat .a{align-self:flex-start;background:#FFF3DC;padding:4px 8px;border-radius:8px 8px 8px 2px}
-/* Ballonette */
-.bl{height:100%;background:linear-gradient(160deg,#FFF5F7,#FCE4EC);display:flex;flex-direction:column}
-.bl-nav{display:flex;justify-content:space-between;align-items:center;padding:3% 5%;font-size:clamp(6px,.9vw,10px);color:#9C4A63}
-.bl-nav b{font-family:Georgia,serif;font-size:clamp(8px,1.3vw,14px);color:#B03A62}
-.bl-hero{flex:1;display:flex;align-items:center;padding:0 6%;gap:6%}
-.bl-copy h4{margin:0;font-family:Georgia,serif;font-size:clamp(10px,2vw,22px);color:#7A2945;line-height:1.1}
-.bl-copy span{display:inline-block;margin-top:8%;background:#B03A62;color:#fff;font-size:clamp(5px,.8vw,9px);padding:4px 9px;border-radius:99px}
-.bl-balloons{position:relative;flex:0 0 38%;height:80%}
-.bl-balloons i{position:absolute;border-radius:50% 50% 48% 52%;width:34%;aspect-ratio:.85}
-.bl-balloons i::after{content:"";position:absolute;left:50%;top:100%;width:1px;height:60%;background:#C9A0AE}
-.bl-balloons i:nth-child(1){left:6%;top:16%;background:#F48FB1}
-.bl-balloons i:nth-child(2){left:36%;top:2%;background:#E5C07B}
-.bl-balloons i:nth-child(3){left:62%;top:20%;background:#F8BBD0}
-.bl-tags{display:flex;gap:2%;padding:0 5% 4%}
-.bl-tags span{font-size:clamp(5px,.75vw,9px);background:#fff;color:#9C4A63;padding:3px 7px;border-radius:99px;border:1px solid #F3C2D2}
-.bl-bot{position:absolute;right:4%;bottom:6%;background:#7A2945;color:#fff;font-size:clamp(5px,.75vw,9px);padding:5px 9px;border-radius:10px 10px 2px 10px}
-/* Patitas */
-.pc{height:100%;background:#FFFBF2;display:flex;flex-direction:column}
-.pc-nav{display:flex;justify-content:space-between;align-items:center;padding:3% 5%;background:#2E7D6B;color:#fff;font-size:clamp(6px,.9vw,10px)}
-.pc-nav b{font-size:clamp(8px,1.2vw,13px)}
-.pc-cart{background:#FFB703;color:#2E3A2F;border-radius:99px;padding:2px 8px;font-weight:700}
-.pc-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:4%;padding:5%}
-.pc-item{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column;overflow:hidden}
-.pc-img{flex:1;display:grid;place-items:center;font-size:clamp(14px,3vw,34px)}
-.pc-item:nth-child(1) .pc-img{background:#E3F2EE}.pc-item:nth-child(2) .pc-img{background:#FFF0D1}.pc-item:nth-child(3) .pc-img{background:#FCE3DA}
-.pc-info{padding:6% 8%;font-size:clamp(5px,.8vw,9px);display:flex;justify-content:space-between}
-.pc-info b{color:#2E7D6B}
-.pc-pay{position:absolute;right:5%;bottom:5%;background:#635BFF;color:#fff;font-size:clamp(5px,.75vw,9px);padding:5px 10px;border-radius:6px;font-weight:600}
-/* Kevin Alva */
-.ka{height:100%;background:#0B0B0F;color:#F2EEE6;display:grid;grid-template-columns:1.1fr 1fr}
-.ka-hero{background:radial-gradient(circle at 30% 30%,#5B2A86 0,#1A0F2B 55%,#0B0B0F 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:7%}
-.ka-hero small{font-size:clamp(5px,.75vw,9px);letter-spacing:.2em;color:#C9A2FF}
-.ka-hero h4{margin:3% 0 0;font-size:clamp(12px,2.6vw,30px);letter-spacing:.04em;line-height:.95;font-weight:900}
-.ka-play{margin-top:6%;display:flex;align-items:center;gap:6px;font-size:clamp(5px,.8vw,9px)}
-.ka-play i{width:clamp(10px,1.6vw,18px);aspect-ratio:1;border-radius:50%;background:#1DB954}
-.ka-shows{padding:7% 8%;display:flex;flex-direction:column;gap:6%}
-.ka-shows small{font-size:clamp(5px,.8vw,9px);letter-spacing:.2em;color:#9C8FB5}
-.ka-show{display:grid;grid-template-columns:auto 1fr auto;gap:8%;align-items:center;border-bottom:1px solid #2A2433;padding-bottom:5%;font-size:clamp(5px,.85vw,10px)}
-.ka-show b{font-size:clamp(7px,1.2vw,13px);color:#C9A2FF}
-.ka-show span:last-child{border:1px solid #C9A2FF;padding:2px 6px;border-radius:99px;font-size:clamp(4px,.7vw,8px)}
-/* Cumple */
-.cs{height:100%;background:#8ED8FF;display:grid;place-items:center;position:relative}
-.cs-card{background:#fff;border:3px solid #1D2B53;border-radius:18px;box-shadow:5px 6px 0 #1D2B53;width:46%;padding:5% 4%;text-align:center;display:flex;flex-direction:column;gap:6px}
-.cs-card small{font-weight:800;font-size:clamp(5px,.8vw,9px);color:#1D2B53}
-.cs-card h4{margin:0;font-size:clamp(10px,2.2vw,24px);color:#FF5A4E;-webkit-text-stroke:1px #1D2B53;font-weight:900;line-height:1}
-.cs-row{border:2px solid #1D2B53;border-radius:8px;padding:3px 6px;font-size:clamp(5px,.75vw,9px);text-align:left;color:#1D2B53;font-weight:700;background:#FFF6D6}
-.cs-wa{background:#25D366;color:#fff;border:2px solid #1D2B53;border-radius:99px;padding:4px;font-size:clamp(5px,.75vw,9px);font-weight:800}
-.cs i{position:absolute;width:6px;height:10px;border-radius:2px}
-.cs-bal{position:absolute;top:8%;width:9%;aspect-ratio:.8;border-radius:50%;border:2px solid #1D2B53}
-
-/* TIMELINE */
-.journey{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
-.journey-intro p{color:var(--muted);margin:16px 0 0;max-width:46ch}
-.journey-intro blockquote{margin:28px 0 0;padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:16px;font-family:var(--display);font-size:1.18rem;font-weight:500;line-height:1.35}
-.tl{list-style:none;margin:0;padding:0;position:relative}
-.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tl li{position:relative;padding:0 0 26px 36px}
-.tl li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--muted)}
-.tl li.tech::before{border-color:var(--accent);background:var(--accent)}
-.tl time{font:600 .78rem var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.tl h4{margin:2px 0 2px;font-family:var(--display);font-size:1.12rem;font-weight:700}
-.tl p{margin:0;color:var(--muted);font-size:.93rem}
-
-/* SKILLS */
-.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--surface)}
-.skill{padding:24px}
-.skill+.skill{border-left:1px solid var(--line)}
-.skill h4{margin:0 0 14px;font-family:var(--display);font-size:1.1rem}
-.skill .stack span{background:var(--bg)}
-
-/* CONTACT */
-.contact{background:var(--navy);color:var(--bg);border-radius:28px;padding:56px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.contact h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-.02em}
-.contact p{opacity:.8;margin:14px 0 0;max-width:44ch}
-.contact .eyebrow{color:var(--accent)}
-.c-list{display:grid;gap:12px}
-.c-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border:1px solid color-mix(in srgb,var(--bg) 25%,transparent);border-radius:14px;flex-wrap:wrap}
-.c-item small{display:block;font:600 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.65}
-.c-item span,.c-item a{font-weight:600;word-break:break-all;text-decoration:none}
-.c-item button{font:600 .8rem var(--body);background:var(--accent);color:#1A1208;border:0;border-radius:99px;padding:8px 14px;cursor:pointer}
-footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr;gap:40px;padding-top:24px}
-  .portrait{max-width:300px;justify-self:start}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(3){border-left:0}
-  .stat:nth-child(n+3){border-top:1px solid var(--line)}
-  .projects{grid-template-columns:1fr}
-  .card.featured{grid-template-columns:1fr}
-  .journey{grid-template-columns:1fr;gap:36px}
-  .skills{grid-template-columns:1fr 1fr}
-  .skill:nth-child(3){border-left:0}
-  .skill:nth-child(n+3){border-top:1px solid var(--line)}
-  .contact{grid-template-columns:1fr;padding:36px 24px}
-  nav ul{display:none}
-}
-@media (max-width:480px){
-  .skills{grid-template-columns:1fr}
-  .skill+.skill{border-left:0;border-top:1px solid var(--line)}
-  .body{padding:22px 20px}
-  .preview,.featured .preview{padding:16px}
-  .status{left:8px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-
-/* Indra-inspired: square edges, light display weight, slate hero band */
-.hero h1{font-weight:500!important;letter-spacing:-.035em!important}
-.hero h1 em{color:var(--accent)}
-.btn{border-radius:0;padding:15px 26px;font-size:1rem}
-.btn.primary{background:var(--navy);border-color:var(--navy);color:var(--bg)}
-.card,.skills,.journey-intro blockquote,.status,.c-item{border-radius:4px}
-.portrait img,.portrait::before{border-radius:4px}
-.contact{border-radius:4px}
-.contact .eyebrow{color:var(--accent-soft)}
-.c-item button{background:var(--bg);color:var(--navy);border-radius:0}
-.pill{border-radius:2px}
-.stack span{border-radius:2px}
-.links a{border-bottom-color:var(--accent)}
-.sec-head h2,.journey h2,.contact h2{font-weight:600!important}
-.stat b{font-weight:600}
-.topband{background:var(--surface);border-bottom:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    background: var(--wa); color: #fff;
+    font-family: inherit; font-weight: 900; font-size: 1.1rem;
+    text-decoration: none; line-height: 1.25;
+    border: 3px solid var(--ink); border-radius: 999px;
+    padding: 16px 20px;
+    box-shadow: 0 6px 0 var(--wa-dark), 0 6px 0 3px var(--ink);
+    transition: transform .1s, box-shadow .1s;
+  }
+  .btn:active { transform: translateY(5px); box-shadow: 0 1px 0 var(--wa-dark), 0 1px 0 3px var(--ink); }
+  .btn:focus-visible { outline: 4px solid var(--sun); outline-offset: 4px; }
+  .btn svg { flex: none; }
+  .note { margin: 16px 0 0; font-weight: 700; font-size: .95rem; }
 </style>
 </head>
 <body>
+  <div class="confetti" aria-hidden="true" id="confetti"></div>
 
-<div class="topband"><div class="wrap">
-<nav>
-  <a class="logo" href="#top">erwin<span>.</span>dev</a>
-  <ul>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#trayectoria">Trayectoria</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><a href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-  </ul>
-</nav>
-</div></div>
-<div class="wrap">
-
-<header class="hero" id="top">
-  <div>
-    <div class="eyebrow">Madrid · Disponible para incorporarme</div>
-    <h1>Erwin A.<br>González <em>Bonilla</em></h1>
-    <p class="pitch">Construyo aplicaciones web con <strong>React y Python</strong> y les integro <strong>IA</strong>: chatbots con la API de OpenAI, agentes y flujos automatizados con <strong>n8n</strong>. Antes de programar gestioné inventario, proveedores y equipos durante más de 15 años, así que diseño software pensando en cómo trabaja de verdad un negocio.</p>
-    <div class="ctas">
-      <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
-      <a class="btn" href="CV-Erwin-Gonzalez-Bonilla.pdf" target="_blank" rel="noopener">Ver CV ↗</a>
-      <a class="btn" href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="https://github.com/ErwinGonzalezBonilla" target="_blank" rel="noopener">GitHub ↗</a>
+  <main class="card">
+    <div class="balloons" aria-hidden="true">
+      <svg class="balloon" width="70" height="160" viewBox="0 0 70 160"><path d="M35 88 C 30 110, 42 125, 33 160" stroke="#1D2B53" stroke-width="2" fill="none"/><ellipse cx="35" cy="42" rx="30" ry="38" fill="#FF5A4E" stroke="#1D2B53" stroke-width="3"/><path d="M29 80 L41 80 L35 89 Z" fill="#FF5A4E" stroke="#1D2B53" stroke-width="3" stroke-linejoin="round"/><ellipse cx="24" cy="28" rx="6" ry="10" fill="#fff" opacity=".6"/></svg>
+      <svg class="balloon" width="70" height="170" viewBox="0 0 70 170" style="margin-top:-14px"><path d="M35 88 C 42 115, 28 130, 36 170" stroke="#1D2B53" stroke-width="2" fill="none"/><ellipse cx="35" cy="42" rx="30" ry="38" fill="#FFD23F" stroke="#1D2B53" stroke-width="3"/><path d="M29 80 L41 80 L35 89 Z" fill="#FFD23F" stroke="#1D2B53" stroke-width="3" stroke-linejoin="round"/><ellipse cx="24" cy="28" rx="6" ry="10" fill="#fff" opacity=".6"/></svg>
+      <svg class="balloon" width="70" height="160" viewBox="0 0 70 160"><path d="M35 88 C 28 112, 40 128, 34 160" stroke="#1D2B53" stroke-width="2" fill="none"/><ellipse cx="35" cy="42" rx="30" ry="38" fill="#2FBF71" stroke="#1D2B53" stroke-width="3"/><path d="M29 80 L41 80 L35 89 Z" fill="#2FBF71" stroke="#1D2B53" stroke-width="3" stroke-linejoin="round"/><ellipse cx="24" cy="28" rx="6" ry="10" fill="#fff" opacity=".6"/></svg>
     </div>
-  </div>
-  <figure class="portrait" style="margin:0">
-    <img src="img/erwin.jpg" alt="Retrato de Erwin González Bonilla" width="520" height="520">
-    <figcaption class="status"><span class="dot"></span>Abierto a ofertas · Madrid / remoto</figcaption>
-  </figure>
-</header>
 
-<div class="stats">
-  <div class="stat"><b>138</b><span>contribuciones en GitHub en 2026</span></div>
-  <div class="stat"><b>5</b><span>proyectos publicados</span></div>
-  <div class="stat"><b>2</b><span>webs en producción en Vercel</span></div>
-  <div class="stat"><b>15+</b><span>años gestionando operaciones</span></div>
-</div>
+    <p class="lead">¡Estás invitado al cumple de</p>
+    <h1>Salvador!</h1>
+    <div class="age">cumple <b>5</b> años 🎉</div>
 
-<section id="proyectos">
-  <div class="sec-head">
-    <div><div class="eyebrow">Portfolio</div><h2>Proyectos</h2></div>
-    <p>Cinco repositorios públicos: un SaaS con IA en desarrollo, un proyecto en equipo y tres webs para clientes reales.</p>
-  </div>
+    <section class="details">
+      <div class="row"><span class="ico">📅</span><div><small>Cuándo</small><strong>Domingo 11 de octubre</strong></div></div>
+      <div class="row"><span class="ico">⏰</span><div><small>Hora</small><strong>De 14:00 a 17:00</strong></div></div>
+      <a class="row maps" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Salesianos%2071%2C%20San%20Joaqu%C3%ADn%2C%20Santiago%2C%20Chile" target="_blank" rel="noopener"><span class="ico">📍</span><div><small>Dónde</small><strong>Kids Park</strong><span class="addr">Av. Salesianos 71, San Joaquín, Santiago</span><span class="maplink">Ver en Google Maps</span></div></a>
+    </section>
 
-  <div class="projects">
-
-    <!-- MyStock -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">mystock · panel de inventario</span></div>
-          <div class="screen"><div class="ms">
-            <div class="ms-side"><b>MyStock</b><s class="on"></s><s></s><s></s><s></s><s></s></div>
-            <div class="ms-main">
-              <div class="ms-kpis">
-                <div class="ms-kpi"><small>Ventas hoy</small><strong>1.284 €</strong></div>
-                <div class="ms-kpi"><small>Productos</small><strong>342</strong></div>
-                <div class="ms-kpi low"><small>Stock bajo</small><strong>7</strong></div>
-              </div>
-              <div class="ms-chart"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:92%"></i><i style="height:70%"></i></div>
-              <div class="ms-chat"><span class="q">¿Qué productos debo reponer esta semana?</span><span class="a">🤖 7 productos bajo mínimo. Te propongo un pedido a 2 proveedores…</span></div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="meta"><span class="pill wip">● En desarrollo</span><span class="pill kind">SaaS · IA</span><span class="commits">85 commits</span></div>
-        <h3>MyStock</h3>
-        <p class="desc">Plataforma SaaS multiempresa para que pequeños negocios gestionen inventario, punto de venta, compras, ventas, clientes y proveedores desde un solo sitio, con un asistente de IA y automatizaciones.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Arquitectura completa por capas: React → FastAPI → SQLAlchemy → PostgreSQL → servicios de IA → n8n.</li>
-          <li>Diseño multi-tenant, autenticación JWT y despliegue planificado en Vercel + Railway.</li>
-          <li>Proyecto tratado como producto: documentación, roadmap, changelog, guía de contribución y licencia.</li>
-          <li>Conoce el problema desde dentro: años gestionando inventario y proveedores en tienda.</li>
-        </ul>
-        <div class="stack"><span>React</span><span>Vite</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>JWT</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>n8n</span></div>
-        <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/MyStock" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
-      </div>
-    </article>
-
-    <!-- Ballonette -->
-    <article class="card">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">ballonette-react.vercel.app</span></div>
-          <div class="screen"><div class="bl">
-            <div class="bl-nav"><b>Ballonette</b><span>Galería · Servicios · Contacto</span></div>
-            <div class="bl-hero">
-              <div class="bl-copy"><h4>Globos, rosas y catering para tu evento</h4><span>Pide presupuesto</span></div>
-              <div class="bl-balloons"><i></i><i></i><i></i></div>
-            </div>
-            <div class="bl-tags"><span>Bodas</span><span>Cumpleaños</span><span>Baby Shower</span><span>Corporativo</span></div>
-            <div class="bl-bot">💬 BalloonBot: ¿qué evento celebras?</div>
-          </div></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Entregado al cliente</span><span class="pill kind">Cliente real · IA</span></div>
-        <h3>Ballonette</h3>
-        <p class="desc">Web para una empresa de decoración de eventos: galería por categorías, panel de administración para subir fotos y BalloonBot, un chatbot conectado a OpenAI que atiende a los clientes.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>SPA con React Router y rutas dinámicas por categoría (/galeria/bodas…).</li>
-          <li>Subida de imágenes en tiempo real a Cloudinary desde un panel admin.</li>
-          <li>Visor lightbox con zoom, teclado y navegación accesible.</li>
-          <li>Deploy continuo desde GitHub a Vercel, optimizado para móvil.</li>
-        </ul>
-        <div class="stack"><span>React</span><span>Vite</span><span>React Router</span><span>Cloudinary</span><span>OpenAI API</span><span>Vercel</span></div>
-        <div class="links"><a href="https://ballonette-react.vercel.app" target="_blank" rel="noopener">Ver demo ↗</a><a href="https://github.com/ErwinGonzalezBonilla/ballonette-react" target="_blank" rel="noopener">Código ↗</a></div>
-      </div>
-    </article>
-
-    <!-- Patitas Club -->
-    <article class="card">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">patitas-club · tienda</span></div>
-          <div class="screen"><div class="pc">
-            <div class="pc-nav"><b>🐾 Patitas Club</b><span class="pc-cart">🛒 3</span></div>
-            <div class="pc-grid">
-              <div class="pc-item"><div class="pc-img">🦴</div><div class="pc-info"><span>Snack dental</span><b>6,90 €</b></div></div>
-              <div class="pc-item"><div class="pc-img">🧶</div><div class="pc-info"><span>Juguete gato</span><b>4,50 €</b></div></div>
-              <div class="pc-item"><div class="pc-img">🛏️</div><div class="pc-info"><span>Cama perro</span><b>29,00 €</b></div></div>
-            </div>
-            <div class="pc-pay">Pagar con Stripe</div>
-          </div></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Terminado</span><span class="pill kind">Proyecto en equipo</span><span class="commits">411 commits</span></div>
-        <h3>Patitas Club</h3>
-        <p class="desc">E-commerce de productos para mascotas desarrollado en equipo como proyecto final del bootcamp Full Stack de 4Geeks Academy.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Full stack completo: frontend React y API REST en Python/Flask.</li>
-          <li>Login seguro con JWT y modelos de datos con SQLAlchemy y migraciones.</li>
-          <li>Pasarela de pago real integrada con Stripe.</li>
-          <li>Trabajo en equipo con Git: ramas, pull requests e issues.</li>
-        </ul>
-        <div class="stack"><span>React</span><span>Python</span><span>Flask</span><span>SQLAlchemy</span><span>JWT</span><span>Stripe</span></div>
-        <div class="links"><a href="https://github.com/4GeeksAcademy/PatitasClub" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
-      </div>
-    </article>
-
-    <!-- Kevin Alva -->
-    <article class="card">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">kevin-alva-web.vercel.app</span></div>
-          <div class="screen"><div class="ka">
-            <div class="ka-hero"><small>WEB OFICIAL</small><h4>KEVIN<br>ALVA</h4><div class="ka-play"><i></i>Escuchar en Spotify</div></div>
-            <div class="ka-shows"><small>PRÓXIMOS SHOWS</small>
-              <div class="ka-show"><b>24 OCT</b><span>Sala principal</span><span>Entradas</span></div>
-              <div class="ka-show"><b>08 NOV</b><span>Gira 2026</span><span>Entradas</span></div>
-              <div class="ka-show"><b>22 NOV</b><span>Fecha especial</span><span>Entradas</span></div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● En producción</span><span class="pill kind">Cliente real</span></div>
-        <h3>Kevin Alva · Web oficial</h3>
-        <p class="desc">Web oficial de un artista musical: vídeo en bucle en portada, agenda de conciertos, discografía, vídeos de YouTube, reproductor de Spotify y formulario de booking.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Sitio rápido en HTML, CSS y JavaScript puro, sin dependencias.</li>
-          <li>Contenido centralizado en un bloque CONFIG: el cliente actualiza shows y discos sin tocar el diseño.</li>
-          <li>Lógica útil: los conciertos con fecha pasada se ocultan solos.</li>
-          <li>Publicación automática en Vercel con cada push a GitHub.</li>
-        </ul>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Spotify embed</span><span>YouTube</span><span>Vercel</span></div>
-        <div class="links"><a href="https://kevin-alva-web.vercel.app" target="_blank" rel="noopener">Ver web ↗</a><a href="https://github.com/ErwinGonzalezBonilla/kevin-alva-web" target="_blank" rel="noopener">Código ↗</a></div>
-      </div>
-    </article>
-
-    <!-- Cumple -->
-    <article class="card">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">invitación · móvil</span></div>
-          <div class="screen"><div class="cs">
-            <span class="cs-bal" style="left:14%;background:#FF5A4E"></span>
-            <span class="cs-bal" style="right:14%;top:14%;background:#FFD23F"></span>
-            <i style="left:30%;top:20%;background:#FF5A4E;transform:rotate(30deg)"></i>
-            <i style="left:72%;top:70%;background:#2FBF71;transform:rotate(-20deg)"></i>
-            <i style="left:20%;top:76%;background:#FFD23F;transform:rotate(60deg)"></i>
-            <div class="cs-card">
-              <small>¡Estás invitado al cumple de</small>
-              <h4>Salvador!</h4>
-              <div class="cs-row">📅 Domingo · 14:00 a 17:00</div>
-              <div class="cs-row" style="background:#E6F8EE">📍 Ver en Google Maps</div>
-              <div class="cs-wa">Confirmar por WhatsApp</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Usada en un evento real</span><span class="pill kind">Mobile first</span></div>
-        <h3>Invitación digital de cumpleaños</h3>
-        <p class="desc">Invitación web para una fiesta infantil, pensada para compartirse por WhatsApp. Los invitados ven los datos del evento, abren la ubicación en Maps y confirman asistencia con un toque.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Confirmación por WhatsApp con enlace wa.me y mensaje pre-rellenado.</li>
-          <li>Animaciones CSS (globos y confeti) que respetan <em>prefers-reduced-motion</em>.</li>
-          <li>Metadatos Open Graph para una vista previa atractiva al compartir el enlace.</li>
-          <li>Un solo archivo, diseño mobile-first con modo oscuro y safe-areas de iPhone.</li>
-        </ul>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Open Graph</span><span>WhatsApp API</span></div>
-        <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/cumple-salvador" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section id="trayectoria">
-  <div class="journey">
-    <div class="journey-intro">
-      <div class="eyebrow">Trayectoria</div>
-      <h2 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-top:8px">De gestionar operaciones a automatizarlas</h2>
-      <p>Llevo años resolviendo los problemas que hoy automatizo: control de inventario, compras, proveedores y logística entre sedes. Esa experiencia me ayuda a entender qué necesita un negocio antes de escribir la primera línea de código.</p>
-      <blockquote>Gestioné el stock de una tienda durante cuatro años. Ahora construyo el software que me habría gustado tener.</blockquote>
-    </div>
-    <ol class="tl">
-      <li class="tech"><time>2026</time><h4>n8n Total: Agentes de IA y Automatización</h4><p>Udemy · Flujos automatizados y agentes con LLMs.</p></li>
-      <li class="tech"><time>02/2025 – 09/2025</time><h4>Full Stack Developer</h4><p>4Geeks Academy España · React, Python, Flask, SQL, APIs REST.</p></li>
-      <li class="tech"><time>04/2024 – 02/2025</time><h4>Desarrollador Web</h4><p>Enclave Formación · Componentes de software y publicación de webs.</p></li>
-      <li><time>2024 – actualidad</time><h4>Oficial de montaje de ventanas · Aluvega</h4><p>Madrid · Medición, ensamblaje y precisión en obra.</p></li>
-      <li><time>2018 – 2022</time><h4>Manager de tienda · The Bunny Boutique</h4><p>Santiago de Chile · Compras, inventario, proveedores, cuentas e impuestos.</p></li>
-      <li><time>2004 – 2017</time><h4>Gestión sociocultural · El Sistema</h4><p>Caracas · Inventario y distribución de instrumentos entre sedes.</p></li>
-      <li><time>2006 – 2011</time><h4>Licenciado en Gestión Sociocultural</h4><p>Universidad Central de Venezuela.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section id="stack">
-  <div class="sec-head"><div><div class="eyebrow">Herramientas</div><h2>Stack técnico</h2></div><p>Lo que uso en los proyectos de arriba.</p></div>
-  <div class="skills">
-    <div class="skill"><h4>IA y automatización</h4><div class="stack"><span>OpenAI API</span><span>Claude</span><span>Gemini</span><span>n8n</span><span>Make</span><span>AI Agents</span><span>Prompt Eng.</span></div></div>
-    <div class="skill"><h4>Frontend</h4><div class="stack"><span>React</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Vite</span></div></div>
-    <div class="skill"><h4>Backend</h4><div class="stack"><span>Python</span><span>Flask</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>APIs REST</span><span>JWT</span></div></div>
-    <div class="skill"><h4>Datos y deploy</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>SQLAlchemy</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>Cloudinary</span></div></div>
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="contact">
-    <div>
-      <div class="eyebrow">Contacto</div>
-      <h2>¿Hablamos?</h2>
-      <p>Busco mi primer puesto como desarrollador Full Stack o de IA en Madrid o en remoto. Español nativo, inglés B1.</p>
-    </div>
-    <div class="c-list">
-      <div class="c-item"><div><small>Email</small><span id="mail">alexcultural@gmail.com</span></div><button type="button" id="copyMail">Copiar</button></div>
-      <div class="c-item"><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">linkedin.com/in/erwingonzalezbonilla ↗</a></div></div>
-      <div class="c-item"><div><small>Currículum</small><a href="CV-Erwin-Gonzalez-Bonilla.pdf" target="_blank" rel="noopener">CV en PDF ↗</a></div></div>
-      <div class="c-item"><div><small>GitHub</small><a href="https://github.com/ErwinGonzalezBonilla" target="_blank" rel="noopener">github.com/ErwinGonzalezBonilla ↗</a></div></div>
-      <div class="c-item"><div><small>Ubicación</small><span>Madrid, España</span></div></div>
-    </div>
-  </div>
-</section>
-
-<footer><span>© 2026 Erwin A. González Bonilla</span><span>Hecho con HTML, CSS y JavaScript</span></footer>
-</div>
+    <a class="btn" id="rsvp" href="#" target="_blank" rel="noopener">
+      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Confirmar asistencia al cumpleaños de Salvador
+    </a>
+    <p class="note">¡Te esperamos para jugar y celebrar! 🎂</p>
+  </main>
 
 <script>
-document.getElementById('copyMail').addEventListener('click',function(){
-  var b=this,t=document.getElementById('mail').textContent;
-  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Seleccionado';}
-  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copiado ✓';setTimeout(function(){b.textContent='Copiar'},1800)},sel)}catch(e){sel()}
-});
-</script>
+  // Número de WhatsApp de mamá (formato internacional, sin + ni espacios). Ej: 34612345678
+  var MAMA_PHONE = "56937103252";
+  var MENSAJE = "¡Sí, asistiré al cumpleaños de Salvador! 🎉";
 
+  var url = MAMA_PHONE
+    ? "https://wa.me/" + MAMA_PHONE + "?text=" + encodeURIComponent(MENSAJE)
+    : "https://wa.me/?text=" + encodeURIComponent(MENSAJE);
+  document.getElementById("rsvp").href = url;
+
+  // Confeti
+  var colors = ["#FF5A4E", "#FFD23F", "#2FBF71", "#FFFFFF", "#1D2B53"];
+  var box = document.getElementById("confetti");
+  for (var i = 0; i < 28; i++) {
+    var s = document.createElement("span");
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.background = colors[i % colors.length];
+    s.style.animationDuration = (6 + Math.random() * 7) + "s";
+    s.style.animationDelay = (-Math.random() * 12) + "s";
+    s.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+    box.appendChild(s);
+  }
+</script>
 </body>
 </html>
