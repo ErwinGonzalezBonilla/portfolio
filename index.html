@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:title" content="Erwin González Bonilla · Full Stack Developer">
 <meta property="og:description" content="Portfolio con proyectos en React, Python, IA y automatización con n8n.">
-<meta property="og:image" content="/img/og.jpg">
+<meta property="og:image" content="https://portafolio-erwin.vercel.app/img/og.jpg">
+<meta property="og:url" content="https://portafolio-erwin.vercel.app/">
+<link rel="canonical" href="https://portafolio-erwin.vercel.app/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="img/favicon.png">
@@ -262,6 +264,19 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
 .ka-ticket .ok{color:#1F8A55;font-weight:700}
 .ka-qr{aspect-ratio:1;max-width:100%}
 .ka-shows{gap:4%!important}
+.gi{height:100%;display:grid;grid-template-columns:1fr 1fr;background:#F7F4FF;font-family:system-ui,sans-serif}
+.gi-form{background:#fff;padding:5% 6%;display:flex;flex-direction:column;gap:4%;border-right:1px solid #E7E1F5;color:#1D2B53}
+.gi-form b{font-size:clamp(7px,1.15vw,13px)}
+.gi-form label{display:flex;flex-direction:column;font-size:clamp(4px,.65vw,8px);color:#6b6f86;gap:2px}
+.gi-form label span{border:1px solid #DCD6EE;border-radius:4px;padding:2px 5px;color:#1D2B53;font-size:clamp(5px,.75vw,9px);background:#FBFAFF}
+.gi-colors{display:flex;gap:5px}
+.gi-colors i{width:clamp(7px,1.1vw,13px);aspect-ratio:1;border-radius:50%;border:1px solid #1D2B53}
+.gi-colors i.on{box-shadow:0 0 0 2px #fff,0 0 0 3px #1D2B53}
+.gi-btns{display:flex;gap:4px;margin-top:auto;flex-wrap:wrap}
+.gi-btns span{font-size:clamp(4px,.65vw,8px);padding:3px 6px;border-radius:99px;border:1px solid #1D2B53;font-weight:700}
+.gi-btns .wa{background:#25D366;color:#fff;border-color:#128C4A}
+.gi-prev{background:#FFB3D1;display:grid;place-items:center;padding:5%}
+.gi-prev .cs-card{width:88%}
 </style>
 </head>
 <body>
@@ -308,7 +323,7 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
 <section id="proyectos">
   <div class="sec-head">
     <div><div class="eyebrow">Portfolio</div><h2>Proyectos</h2></div>
-    <p>Cinco proyectos: un SaaS con IA en desarrollo, una web con venta de entradas y pagos con Stripe, un proyecto en equipo y dos webs más para clientes reales.</p>
+    <p>Cinco proyectos: un SaaS con IA en desarrollo, una web con venta de entradas y pagos con Stripe, un proyecto en equipo, una web para un cliente real y una herramienta pública para crear invitaciones.</p>
   </div>
 
   <div class="projects">
@@ -446,40 +461,47 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
     </article>
 
 
-    <!-- Cumple -->
+    <!-- Generador de invitaciones -->
     <article class="card featured">
       <div class="preview">
         <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">invitación · móvil</span></div>
-          <div class="screen"><div class="cs">
-            <span class="cs-bal" style="left:14%;background:#FF5A4E"></span>
-            <span class="cs-bal" style="right:14%;top:14%;background:#FFD23F"></span>
-            <i style="left:30%;top:20%;background:#FF5A4E;transform:rotate(30deg)"></i>
-            <i style="left:72%;top:70%;background:#2FBF71;transform:rotate(-20deg)"></i>
-            <i style="left:20%;top:76%;background:#FFD23F;transform:rotate(60deg)"></i>
-            <div class="cs-card">
-              <small>¡Estás invitado al cumple de</small>
-              <h4>Salvador!</h4>
-              <div class="cs-row">📅 Domingo · 14:00 a 17:00</div>
-              <div class="cs-row" style="background:#E6F8EE">📍 Ver en Google Maps</div>
-              <div class="cs-wa">Confirmar por WhatsApp</div>
+          <div class="bar"><i></i><i></i><i></i><span class="url">generador-invitaciones.vercel.app</span></div>
+          <div class="screen"><div class="gi">
+            <div class="gi-form">
+              <b>Crea tu invitación 🎈</b>
+              <label>Nombre<span>Lucía</span></label>
+              <label>Cumple<span>7 años</span></label>
+              <label>Fecha<span>Sábado 14 nov · 17:00</span></label>
+              <label>WhatsApp<span>+34 600 000 000</span></label>
+              <div class="gi-colors"><i style="background:#8ED8FF"></i><i style="background:#FFB3D1" class="on"></i><i style="background:#9EE6C4"></i><i style="background:#CDB6FF"></i></div>
+              <div class="gi-btns"><span>Copiar enlace</span><span class="wa">Enviar por WhatsApp</span></div>
+            </div>
+            <div class="gi-prev">
+              <div class="cs-card">
+                <small>¡Estás invitado al cumple de</small>
+                <h4>Lucía!</h4>
+                <div class="cs-row">📅 Sábado 14 nov · 17:00</div>
+                <div class="cs-row" style="background:#E6F8EE">📍 Ver en Google Maps</div>
+                <div class="cs-wa">Confirmar por WhatsApp</div>
+              </div>
             </div>
           </div></div>
         </div>
       </div>
       <div class="body">
-        <div class="meta"><span class="pill live">● Usada en un evento real</span><span class="pill kind">Mobile first</span></div>
-        <h3>Invitación digital de cumpleaños</h3>
-        <p class="desc">Invitación web para una fiesta infantil, pensada para compartirse por WhatsApp. Los invitados ven los datos del evento, abren la ubicación en Maps y confirman asistencia con un toque.</p>
+        <div class="meta"><span class="pill live">● Online · uso público</span><span class="pill kind">Herramienta web · ES / EN</span></div>
+        <h3>Generador de invitaciones</h3>
+        <p class="desc">Herramienta para que cualquiera cree una invitación de cumpleaños en un minuto: rellena los datos, elige un color, ve la vista previa en directo y comparte el enlace por WhatsApp. Los invitados ven la ubicación en Google Maps y confirman asistencia con un toque.</p>
         <div class="why-title">Qué demuestra</div>
         <ul class="why">
-          <li>Confirmación por WhatsApp con enlace wa.me y mensaje pre-rellenado.</li>
-          <li>Animaciones CSS (globos y confeti) que respetan <em>prefers-reduced-motion</em>.</li>
-          <li>Metadatos Open Graph para una vista previa atractiva al compartir el enlace.</li>
-          <li>Un solo archivo, diseño mobile-first con modo oscuro y safe-areas de iPhone.</li>
+          <li>De proyecto a producto: convertí una invitación hecha a mano para un cliente en una herramienta que usa cualquiera.</li>
+          <li>Sin backend ni base de datos: toda la invitación viaja en los parámetros de la URL con URLSearchParams.</li>
+          <li>Vista previa en directo, interfaz e invitaciones en español e inglés, y fechas formateadas según el idioma.</li>
+          <li>Confirmación por WhatsApp (wa.me), botón de Google Maps y copia del enlace con la API del portapapeles.</li>
+          <li><span>Datos del usuario insertados de forma segura con textContent, modo oscuro y animaciones que respetan <em>prefers-reduced-motion</em>.</span></li>
         </ul>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Open Graph</span><span>WhatsApp API</span></div>
-        <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/cumple-salvador" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
+        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>URLSearchParams</span><span>i18n ES/EN</span><span>WhatsApp</span><span>Vercel</span></div>
+        <div class="links"><a href="https://generador-invitaciones.vercel.app" target="_blank" rel="noopener">Crear una invitación ↗</a><a href="https://github.com/ErwinGonzalezBonilla/generador-invitaciones" target="_blank" rel="noopener">Código ↗</a></div>
       </div>
     </article>
 
