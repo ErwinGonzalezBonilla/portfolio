@@ -299,7 +299,7 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
   <div>
     <div class="eyebrow">Automatización · IA · Full Stack · Madrid</div>
     <h1>Erwin A.<br>González <em>Bonilla</em></h1>
-    <p class="pitch">Automatizo el trabajo repetitivo de los negocios con <strong>n8n e IA</strong>: flujos que reciben, clasifican, registran y notifican sin intervención manual, chatbots con la API de OpenAI y agentes con LLMs. También construyo las webs y APIs que los sostienen con <strong>React y Python</strong>. Antes de programar gestioné inventario, proveedores y equipos durante más de 15 años, así que sé qué tareas merece la pena automatizar.</p>
+    <p class="pitch">Automatizo el trabajo repetitivo de los negocios con <strong>n8n e IA</strong>: flujos que reciben solicitudes, las priorizan, agendan citas y envían recordatorios sin intervención manual, chatbots con la API de OpenAI y agentes con LLMs. También construyo las webs y APIs que los sostienen con <strong>React y Python</strong>. Antes de programar gestioné inventario, proveedores y equipos durante más de 15 años, así que sé qué tareas merece la pena automatizar.</p>
     <div class="ctas">
       <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
       <a class="btn" href="CV-Erwin-Gonzalez-Bonilla.pdf" target="_blank" rel="noopener">Ver CV ↗</a>
@@ -323,59 +323,48 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
 <section id="proyectos">
   <div class="sec-head">
     <div><div class="eyebrow">Portfolio</div><h2>Proyectos</h2></div>
-    <p>Seis proyectos: un flujo de automatización con n8n, un SaaS con IA en desarrollo, dos webs entregadas a clientes reales con dominio propio (una con venta de entradas y pagos con Stripe), un proyecto en equipo y una herramienta pública para crear invitaciones.</p>
+    <p>Seis proyectos: un sistema de automatización con n8n e IA (solicitudes, citas y recordatorios), un SaaS con IA en desarrollo, dos webs entregadas a clientes reales con dominio propio (una con venta de entradas y pagos con Stripe), un proyecto en equipo y una herramienta pública para crear invitaciones.</p>
   </div>
 
   <div class="projects">
 
-    <!-- Automatización de solicitudes (n8n) -->
+    <!-- Automatización: solicitudes, citas y recordatorios (n8n) -->
     <article class="card featured">
       <div class="preview">
         <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">n8n · workflow: solicitudes de clientes</span></div>
+          <div class="bar"><i></i><i></i><i></i><span class="url">n8n · solicitudes, citas y recordatorios</span></div>
           <div class="screen"><svg class="n8" viewBox="0 0 320 200" width="100%" height="100%" font-family="system-ui,sans-serif">
             <defs><pattern id="n8dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#3A3A42"/></pattern></defs>
             <rect width="320" height="200" fill="#232328"/><rect width="320" height="200" fill="url(#n8dots)"/>
-            <text x="12" y="18" font-size="8" fill="#9A9AA6">Solicitudes de clientes</text>
-            <text x="308" y="18" font-size="7.5" fill="#5FD397" text-anchor="end">✓ Prueba correcta</text>
-            <g fill="none" stroke-width="1.6">
-              <path d="M58 100H92" stroke="#8C8C99"/>
-              <path d="M136 100C154 100 154 56 172 56" stroke="#5FD397"/>
-              <path d="M136 100C154 100 154 144 172 144" stroke="#8C8C99"/>
-              <g stroke="#6E6E7A" stroke-dasharray="3 3"><path d="M216 56H256"/><path d="M216 144H256"/><path d="M216 56C236 56 236 144 256 144"/><path d="M216 144C236 144 236 56 256 56"/></g>
+            <text x="12" y="16" font-size="7.5" fill="#9A9AA6">1 · Solicitudes y citas</text>
+            <text x="308" y="16" font-size="7" fill="#5FD397" text-anchor="end">✓ Tests OK</text>
+            <line x1="12" y1="136" x2="308" y2="136" stroke="#3A3A42"/>
+            <text x="12" y="147" font-size="7.5" fill="#9A9AA6">2 · Recordatorios</text>
+            <g fill="none" stroke-width="1.5">
+              <path d="M48 44H60M96 44H108M202 44H214M250 44H262" stroke="#8C8C99"/>
+              <path d="M144 44H166" stroke="#5FD397"/>
+              <path d="M144 44C155 44 155 98 166 98" stroke="#8C8C99"/>
+              <path d="M48 164H70M106 164H166M202 164H214M250 164H262" stroke="#8C8C99"/>
             </g>
-            <text x="148" y="70" font-size="6.5" fill="#5FD397" text-anchor="middle">true</text>
-            <text x="148" y="136" font-size="6.5" fill="#9A9AA6" text-anchor="middle">false</text>
-            <g stroke-width="1.4">
-              <rect x="14" y="78" width="44" height="44" rx="7" fill="#33333B" stroke="#55555F"/>
-              <rect x="92" y="78" width="44" height="44" rx="7" fill="#33333B" stroke="#FF6D5A"/>
-              <rect x="172" y="34" width="44" height="44" rx="7" fill="#33333B" stroke="#5FD397"/>
-              <rect x="172" y="122" width="44" height="44" rx="7" fill="#33333B" stroke="#55555F"/>
-              <rect x="256" y="34" width="44" height="44" rx="7" fill="#2A2A30" stroke="#55555F" stroke-dasharray="3 2"/>
-              <rect x="256" y="122" width="44" height="44" rx="7" fill="#2A2A30" stroke="#55555F" stroke-dasharray="3 2"/>
-            </g>
-            <g font-size="18" text-anchor="middle"><text x="36" y="106">📝</text><text x="114" y="106">🔀</text><text x="194" y="62">⭐</text><text x="194" y="150">📋</text><text x="278" y="62" opacity=".75">📊</text><text x="278" y="150" opacity=".75">📧</text></g>
-            <g font-size="7" fill="#D6D6DE" text-anchor="middle">
-              <text x="36" y="134">Formulario</text><text x="114" y="134">IF ≥ 300 €</text>
-              <text x="194" y="90">Prioritaria</text><text x="194" y="178">Estándar</text>
-              <text x="278" y="90">Sheets</text><text x="278" y="178">Gmail</text>
-            </g>
+            <text x="155" y="39" font-size="6" fill="#5FD397" text-anchor="middle">true</text>
+            <text x="150" y="86" font-size="6" fill="#9A9AA6" text-anchor="middle">false</text>
+            <rect x="12" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="30" y="50" font-size="15" text-anchor="middle">📝</text><text x="30" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Formulario</text><rect x="60" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#9F7AEA" stroke-width="1.3"/><text x="78" y="50" font-size="15" text-anchor="middle">🤖</text><text x="78" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">IA</text><rect x="108" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#FF6D5A" stroke-width="1.3"/><text x="126" y="50" font-size="15" text-anchor="middle">🔀</text><text x="126" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">IF ≥ 300 €</text><rect x="166" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#5FD397" stroke-width="1.3"/><text x="184" y="50" font-size="15" text-anchor="middle">🗓️</text><text x="184" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Agenda</text><rect x="214" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#5FD397" stroke-width="1.3"/><text x="232" y="50" font-size="15" text-anchor="middle">📆</text><text x="232" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Calendar</text><rect x="262" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#5FD397" stroke-width="1.3"/><text x="280" y="50" font-size="15" text-anchor="middle">✅</text><text x="280" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Confirmación</text><rect x="166" y="80" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="184" y="104" font-size="15" text-anchor="middle">📋</text><text x="184" y="127" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Pendiente</text><rect x="12" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="30" y="170" font-size="15" text-anchor="middle">⏱️</text><text x="30" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Cada hora</text><rect x="70" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="88" y="170" font-size="15" text-anchor="middle">📊</text><text x="88" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Citas</text><rect x="166" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#F2C35B" stroke-width="1.3"/><text x="184" y="170" font-size="15" text-anchor="middle">⏰</text><text x="184" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Día antes</text><rect x="214" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#F2C35B" stroke-width="1.3"/><text x="232" y="170" font-size="15" text-anchor="middle">📍</text><text x="232" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Mismo día</text><rect x="262" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#F2C35B" stroke-width="1.3"/><text x="280" y="170" font-size="15" text-anchor="middle">💬</text><text x="280" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Seguimiento</text>
           </svg></div>
         </div>
       </div>
       <div class="body">
-        <div class="meta"><span class="pill wip">● En desarrollo</span><span class="pill kind">Automatización · n8n</span></div>
-        <h3>Automatización de solicitudes de clientes</h3>
-        <p class="desc">Flujo en n8n que elimina el trabajo manual de recibir, revisar y organizar las solicitudes de clientes. El cliente rellena un formulario con sus datos, el servicio que necesita y su presupuesto estimado, y el flujo clasifica la solicitud automáticamente.</p>
+        <div class="meta"><span class="pill wip">● En pruebas</span><span class="pill kind">Automatización · n8n · IA</span></div>
+        <h3>Solicitudes, citas y recordatorios con n8n</h3>
+        <p class="desc">Sistema de automatización para un negocio de servicios: recibe las solicitudes de los clientes, las analiza con IA, da prioridad a los presupuestos de 300 € o más, agenda la cita en la primera hora libre y envía los recordatorios solo. Sin apuntar nada a mano.</p>
         <div class="why-title">Qué demuestra</div>
         <ul class="why">
-          <li>Regla de negocio con un nodo IF: las solicitudes con presupuesto de 300 € o más van a una rama prioritaria y el resto a una rama estándar.</li>
-          <li>Formulario y clasificación validados con datos de prueba.</li>
-          <li>Arquitectura preparada para registrar cada solicitud en Google Sheets y avisar por email al negocio y al cliente (integración en curso, con pruebas de extremo a extremo).</li>
-          <li>Elegí n8n para conectar servicios de forma visual y controlar el flujo de datos sin programar toda la integración desde cero.</li>
-          <li>Proyecto versionado en GitHub y documentado para su mantenimiento.</li>
+          <li>Prioridad por presupuesto con un nodo IF: desde 300 € el cliente recibe su cita confirmada al momento; el resto queda pendiente de agendar y el negocio recibe el aviso.</li>
+          <li>Gestor de citas sin solapes: respeta horario, días laborables y antelación mínima; si la hora pedida está ocupada, asigna la siguiente libre y crea el evento en Google Calendar.</li>
+          <li>Recordatorios automáticos por correo el día antes y el mismo día, seguimiento después de la cita y agenda diaria para el negocio, sin enviar nunca un aviso dos veces.</li>
+          <li>IA con OpenAI que resume cada solicitud y redacta un mensaje personalizado; si falla, el flujo sigue.</li>
+          <li>Alertas de error por email y lógica de los nodos probada con tests automáticos (fines de semana, huecos ocupados, cambio de hora…).</li>
         </ul>
-        <div class="stack"><span>n8n</span><span>Formularios</span><span>Nodo IF</span><span>Google Sheets</span><span>Gmail</span><span>GitHub</span></div>
+        <div class="stack"><span>n8n</span><span>OpenAI API</span><span>Google Sheets</span><span>Google Calendar</span><span>Gmail</span><span>JavaScript</span><span>Luxon</span><span>Tests</span></div>
         <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/n8n-gestion-solicitudes-clientes" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
       </div>
     </article>
@@ -583,7 +572,7 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
 <section id="stack">
   <div class="sec-head"><div><div class="eyebrow">Herramientas</div><h2>Stack técnico</h2></div><p>Lo que uso en los proyectos de arriba.</p></div>
   <div class="skills">
-    <div class="skill"><h4>IA y automatización</h4><div class="stack"><span>n8n</span><span>Make</span><span>Webhooks</span><span>Google Sheets</span><span>Gmail</span><span>OpenAI API</span><span>Claude</span><span>Gemini</span><span>AI Agents</span><span>Prompt Eng.</span></div></div>
+    <div class="skill"><h4>IA y automatización</h4><div class="stack"><span>n8n</span><span>Make</span><span>Webhooks</span><span>Google Sheets</span><span>Google Calendar</span><span>Gmail</span><span>OpenAI API</span><span>Claude</span><span>Gemini</span><span>AI Agents</span><span>Prompt Eng.</span></div></div>
     <div class="skill"><h4>Frontend</h4><div class="stack"><span>React</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Vite</span></div></div>
     <div class="skill"><h4>Backend</h4><div class="stack"><span>Python</span><span>Flask</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>APIs REST</span><span>JWT</span></div></div>
     <div class="skill"><h4>Datos y deploy</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>SQLAlchemy</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>Cloudinary</span></div></div>
