@@ -3,609 +3,713 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="Erwin González Bonilla · Automatización con n8n e IA · Full Stack">
-<meta property="og:description" content="Automatizo procesos de negocio con n8n e IA y construyo webs con React y Python.">
-<meta property="og:image" content="https://portafolio-erwin.vercel.app/img/og.jpg">
-<meta property="og:url" content="https://portafolio-erwin.vercel.app/">
+<title>Orange Street Automation · Webs, tiendas online y automatizaciones con IA</title>
+<meta name="description" content="Agencia de desarrollo y automatización. Creamos webs que venden, tiendas online con pagos, chatbots con IA y automatizaciones con n8n para pequeños negocios en España y Latinoamérica.">
+<meta name="theme-color" content="#14110F">
 <link rel="canonical" href="https://portafolio-erwin.vercel.app/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Orange Street Automation">
+<meta property="og:description" content="Webs, tiendas online y automatizaciones con IA que trabajan por tu negocio.">
+<meta property="og:image" content="https://portafolio-erwin.vercel.app/img/og-agencia.png">
+<meta property="og:url" content="https://portafolio-erwin.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="apple-touch-icon" href="img/favicon.png">
-<title>Erwin González Bonilla</title>
-<meta name="description" content="Automatización con n8n e IA y desarrollo Full Stack en Madrid. Proyectos con n8n, OpenAI, React y Python.">
+<link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Orange Street Automation","url":"https://portafolio-erwin.vercel.app/","logo":"https://portafolio-erwin.vercel.app/img/logo-180.png","email":"alexcultural@gmail.com","founder":{"@type":"Person","name":"Erwin A. González Bonilla"},"areaServed":["España","Chile","Latinoamérica"],"address":{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"ES"},"sameAs":["https://www.linkedin.com/in/erwingonzalezbonilla","https://github.com/ErwinGonzalezBonilla"],"knowsAbout":["Desarrollo web","Tiendas online","Automatización con n8n","Chatbots con IA","Integración de pagos"]}
+</script>
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto}
-
-/* Layout: hero con foto + cifras reales de GitHub; proyecto destacado a ancho completo, el resto en rejilla de 2; trayectoria como línea temporal; contacto al pie */
 :root{
-  --bg:#ECEAE4; --surface:#F7F6F2; --ink:#1B2836; --muted:#5B6676; --line:#D4D1C9;
-  --accent:#4C6488; --accent-soft:#DCE2EA; --navy:#1B2A3A; --ok:#1F8A55; --ok-soft:#DDF1E6; --wip:#8A5A00; --wip-soft:#FBEBC8;
-  --display:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --bg:#14110F; --bg2:#1C1815; --card:#221D19; --line:#3A322B; --ink:#FFF4EA; --muted:#BFB2A6; --dim:#8C7F73;
+  --orange:#FF6A1A; --orange2:#FF8A4C; --orange-ink:#1A0D04; --cream:#FFF4EA; --teal:#2BD4B4; --lilac:#B9A6FF; --yellow:#FFC94A;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
   --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --r:22px; --wrap:1200px;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111922; --surface:#18222E; --ink:#ECEAE4; --muted:#9BA6B5; --line:#2A3544;
-  --accent:#9FB4D3; --accent-soft:#22303F; --navy:#DCE2EA; --ok:#5FD397; --ok-soft:#15372A; --wip:#F2C35B; --wip-soft:#3A2F14; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#111922; --surface:#18222E; --ink:#ECEAE4; --muted:#9BA6B5; --line:#2A3544;
-  --accent:#9FB4D3; --accent-soft:#22303F; --navy:#DCE2EA; --ok:#5FD397; --ok-soft:#15372A; --wip:#F2C35B; --wip-soft:#3A2F14; color-scheme:dark}
-
-*,*::before,*::after{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;padding-inline:20px;padding-block:0}
-.wrap{max-width:1080px;margin:0 auto}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
-.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-
-/* NAV */
-nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;gap:16px;flex-wrap:wrap}
-.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.01em}
-.logo span{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.95rem}
-nav ul a{text-decoration:none;color:var(--muted)}
-nav ul a:hover{color:var(--ink)}
-
-/* HERO */
-.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center;padding-block:48px 64px}
-.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:800;letter-spacing:-.03em;margin-top:14px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.role{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2.2vw,1.45rem);margin:18px 0 0;color:var(--navy)}
-.pitch{max-width:60ch;color:var(--muted);font-size:1.06rem;margin:22px 0 28px}
-.pitch strong{color:var(--ink);font-weight:600}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;border:1.5px solid var(--ink);transition:transform .15s}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0}
+.mono{font-family:var(--mono)}
+.kicker{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)!important}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:15px 26px;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--ink);color:var(--bg)}
-.portrait{position:relative;justify-self:center;width:100%;max-width:380px}
-.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;max-width:100%}
-.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--accent);border-radius:28px;z-index:-1}
-.portrait{isolation:isolate}
-.status{position:absolute;left:-14px;bottom:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:.85rem;box-shadow:0 10px 30px rgba(10,20,40,.12);display:flex;gap:10px;align-items:center}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px var(--ok-soft)}
+.btn--orange{background:var(--orange);color:var(--orange-ink);box-shadow:0 10px 30px -10px rgba(255,106,26,.7)}
+.btn--orange:hover{background:var(--orange2)}
+.btn--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn--ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn svg{width:18px;height:18px}
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:88px}
-.stat{padding:22px 18px}
-.stat+.stat{border-left:1px solid var(--line)}
-.stat b{display:block;font-family:var(--display);font-size:2.1rem;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.stat span{color:var(--muted);font-size:.88rem}
+/* ---------- barra superior ---------- */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand img{width:40px;height:40px}
+.brand b{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.brand small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-top:3px}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{text-decoration:none;color:var(--muted);font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
+.menu a:hover{color:var(--ink);background:var(--card)}
+.top .btn{padding:11px 20px;font-size:15px}
+@media (max-width:900px){.menu{display:none}.top .btn{margin-left:auto}}
+.show-sm{display:none}
+@media (max-width:520px){.hide-sm{display:none}.show-sm{display:inline}}
+@media (max-width:420px){.brand small{display:none}.top .btn{padding:10px 16px;font-size:14px}}
 
-/* SECTIONS */
-section{margin-bottom:96px}
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
-.sec-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-top:8px}
-.sec-head p{color:var(--muted);max-width:46ch;margin:0}
+/* ---------- portada ---------- */
+.hero{position:relative;padding:72px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:900px;height:900px;background:radial-gradient(closest-side,rgba(255,106,26,.28),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero .wrap>*{min-width:0}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 8px;font-size:14px;font-weight:600;color:var(--muted)}
+.pill i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(43,212,180,.2);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(43,212,180,0)}}
+.hero h1{font-size:clamp(40px,7.4vw,96px);font-weight:800;margin:22px 0 22px}
+.hero h1 em{font-style:normal;color:var(--orange);position:relative}
+@media (min-width:700px){.hero h1 em{white-space:nowrap}}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.12em;background:var(--orange);opacity:.25;border-radius:4px}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:56ch}
+.lead b{color:var(--ink);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:36px;color:var(--dim);font-size:14px}
+.trust b{color:var(--ink);font-family:var(--display);font-size:17px;font-weight:700}
 
-/* PROJECTS */
-.projects{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
-.card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr}
-.preview{padding:22px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;min-width:0}
-.featured .preview{padding:34px}
-.browser{width:100%;border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(10,20,40,.18);background:#fff;transition:transform .3s}
-.card:hover .browser{transform:translateY(-4px)}
-.bar{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#E9EBEF}
-.bar i{width:8px;height:8px;border-radius:50%;background:#C5CAD3}
-.bar .url{flex:1;margin-left:8px;background:#fff;border-radius:6px;font:500 10px/1 var(--mono);color:#5A6377;padding:5px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.screen{aspect-ratio:16/10;position:relative;overflow:hidden;font-family:system-ui,sans-serif;color:#1d2433}
+/* flujo animado */
+.flow{background:linear-gradient(160deg,#2A221C,#1A1613);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8);position:relative}
+.flow__head{display:flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:16px}
+.flow__head span{width:10px;height:10px;border-radius:50%;background:#3A322B}
+.flow__head span:first-child{background:#FF5F57}.flow__head span:nth-child(2){background:#FEBC2E}.flow__head span:nth-child(3){background:#28C840}
+.flow__head b{margin-left:auto;color:var(--teal);font-weight:600}
+.step{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;opacity:.35;transform:translateY(6px);transition:opacity .5s,transform .5s,border-color .5s}
+.step+.step{margin-top:10px}
+.step.on{opacity:1;transform:none;border-color:#4A3E33}
+.step .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px}
+.step b{display:block;font-size:15px}
+.step small{color:var(--dim);font-size:13px}
+.step .ok{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#2C2520;color:transparent;font-size:13px;font-weight:800;transition:background .4s,color .4s}
+.step.done .ok{background:var(--teal);color:#06261F}
+.flow__foot{display:flex;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:13px;color:var(--dim)}
+.flow__foot b{color:var(--orange);font-family:var(--display);font-size:22px}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.flow{max-width:520px}}
 
-.body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:16px;flex:1;min-width:0}
-.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.pill{font:600 .72rem/1 var(--mono);padding:6px 10px;border-radius:999px;letter-spacing:.02em}
-.pill.live{background:var(--ok-soft);color:var(--ok)}
-.pill.wip{background:var(--wip-soft);color:var(--wip)}
-.pill.kind{background:transparent;border:1px solid var(--line);color:var(--muted)}
-.body h3{font-size:1.65rem;font-weight:700;letter-spacing:-.015em}
-.featured .body h3{font-size:2.1rem}
-.body p.desc{margin:0;color:var(--muted)}
-.why{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:.94rem}
-.why li{display:grid;grid-template-columns:18px 1fr;gap:8px}
-.why li::before{content:"";width:8px;height:8px;margin-top:.55em;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
-.why-title{font:600 .72rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink)}
+/* cinta */
+.marquee{border-block:1px solid var(--line);overflow:hidden;background:var(--bg2)}
+.marquee__in{display:flex;gap:48px;padding:18px 0;width:max-content;animation:slide 38s linear infinite}
+.marquee span{font-family:var(--display);font-weight:700;font-size:22px;color:var(--dim);white-space:nowrap;display:flex;align-items:center;gap:48px}
+.marquee span::after{content:"✦";color:var(--orange);font-size:16px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- secciones ---------- */
+.sec{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,5vw,64px);font-weight:800;margin-top:12px;max-width:16ch}
+.sec-head p{color:var(--muted);max-width:44ch;font-size:17px}
+
+/* servicios */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px;transition:transform .3s,border-color .3s}
+.svc:hover{transform:translateY(-6px);border-color:var(--orange)}
+.svc .ico{width:56px;height:56px;border-radius:16px;display:grid;place-items:center}
+.svc .ico svg{width:28px;height:28px}
+.svc h3{font-size:24px;font-weight:700}
+.svc p{color:var(--muted);font-size:15px}
+.svc ul{list-style:none;margin:auto 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;gap:7px;font-size:14px}
+.svc li{display:flex;gap:8px}
+.svc li::before{content:"→";color:var(--orange);font-weight:700}
+@media (max-width:1000px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.services{grid-template-columns:1fr}}
+
+/* trabajos destacados */
+.cases{display:grid;gap:22px}
+.case{display:grid;grid-template-columns:1.05fr .95fr;background:var(--card);border:1px solid var(--line);border-radius:28px;overflow:hidden;min-height:430px}
+.case:nth-child(even){grid-template-columns:.95fr 1.05fr}
+.case:nth-child(even) .case__vis{order:2}
+.case__vis{position:relative;display:grid;place-items:center;padding:36px;overflow:hidden}
+.case__txt{padding:40px;display:flex;flex-direction:column;gap:16px}
+.case__meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-family:var(--mono);font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:#2C2520;color:var(--muted)}
+.tag.live{background:rgba(43,212,180,.14);color:var(--teal)}
+.tag.wip{background:rgba(255,201,74,.14);color:var(--yellow)}
+.case h3{font-size:clamp(30px,3.4vw,42px);font-weight:800}
+.case .client{color:var(--orange);font-weight:600}
+.case p.desc{color:var(--muted)}
+.results{display:grid;gap:10px;margin:4px 0;padding:0;list-style:none}
+.results li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px}
+.results li::before{content:"✓";width:22px;height:22px;border-radius:50%;background:rgba(255,106,26,.16);color:var(--orange);display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:2px}
 .stack{display:flex;flex-wrap:wrap;gap:6px}
-.stack span{font:500 .76rem/1 var(--mono);padding:6px 9px;border-radius:7px;background:var(--bg);border:1px solid var(--line)}
-.links{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
-.links a{font-weight:600;font-size:.92rem;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px}
-.links a:hover{color:var(--accent)}
-.commits{font:500 .78rem var(--mono);color:var(--muted)}
+.stack span{font-size:12px;font-family:var(--mono);color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+.case__links{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:6px}
+.case__links a{font-weight:700;text-decoration:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg)}
+.case__links a.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.case__links a:hover{opacity:.85}
+@media (max-width:900px){.case,.case:nth-child(even){grid-template-columns:1fr}.case:nth-child(even) .case__vis{order:0}.case__vis{min-height:300px}.case__txt{padding:28px}}
 
-/* ---- Mockups (each one imitates its own site, so it keeps its own colors in both themes) ---- */
-/* MyStock */
-.ms{display:grid;grid-template-columns:22% 1fr;height:100%;background:#F5F7FB}
-.ms-side{background:#14213D;padding:10% 10%;display:flex;flex-direction:column;gap:7%}
-.ms-side b{color:#fff;font-size:clamp(7px,1.1vw,12px);font-weight:800}
-.ms-side s{display:block;height:5%;min-height:5px;border-radius:3px;background:rgba(255,255,255,.18);text-decoration:none}
-.ms-side s.on{background:#FCA311}
-.ms-main{padding:4% 4.5%;display:grid;grid-template-rows:auto auto 1fr;gap:5%}
-.ms-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:4%}
-.ms-kpi{background:#fff;border-radius:6px;padding:7% 8%;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.ms-kpi small{display:block;font-size:clamp(5px,.75vw,9px);color:#7a8396}
-.ms-kpi strong{font-size:clamp(8px,1.4vw,16px)}
-.ms-kpi.low strong{color:#D64545}
-.ms-chart{background:#fff;border-radius:6px;padding:4%;display:flex;align-items:flex-end;gap:3%;height:clamp(40px,9vw,110px);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.ms-chart i{flex:1;background:#14213D;border-radius:2px 2px 0 0}
-.ms-chart i:nth-child(odd){background:#FCA311}
-.ms-chat{background:#fff;border-radius:6px;padding:3% 4%;display:flex;flex-direction:column;gap:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:clamp(6px,.85vw,10px)}
-.ms-chat .q{align-self:flex-end;background:#14213D;color:#fff;padding:4px 8px;border-radius:8px 8px 2px 8px}
-.ms-chat .a{align-self:flex-start;background:#FFF3DC;padding:4px 8px;border-radius:8px 8px 8px 2px}
-/* Ballonette */
-.bl{height:100%;background:linear-gradient(160deg,#FFF5F7,#FCE4EC);display:flex;flex-direction:column}
-.bl-nav{display:flex;justify-content:space-between;align-items:center;padding:3% 5%;font-size:clamp(6px,.9vw,10px);color:#9C4A63}
-.bl-nav b{font-family:Georgia,serif;font-size:clamp(8px,1.3vw,14px);color:#B03A62}
-.bl-hero{flex:1;display:flex;align-items:center;padding:0 6%;gap:6%}
-.bl-copy h4{margin:0;font-family:Georgia,serif;font-size:clamp(10px,2vw,22px);color:#7A2945;line-height:1.1}
-.bl-copy span{display:inline-block;margin-top:8%;background:#B03A62;color:#fff;font-size:clamp(5px,.8vw,9px);padding:4px 9px;border-radius:99px}
-.bl-balloons{position:relative;flex:0 0 38%;height:80%}
-.bl-balloons i{position:absolute;border-radius:50% 50% 48% 52%;width:34%;aspect-ratio:.85}
-.bl-balloons i::after{content:"";position:absolute;left:50%;top:100%;width:1px;height:60%;background:#C9A0AE}
-.bl-balloons i:nth-child(1){left:6%;top:16%;background:#F48FB1}
-.bl-balloons i:nth-child(2){left:36%;top:2%;background:#E5C07B}
-.bl-balloons i:nth-child(3){left:62%;top:20%;background:#F8BBD0}
-.bl-tags{display:flex;gap:2%;padding:0 5% 4%}
-.bl-tags span{font-size:clamp(5px,.75vw,9px);background:#fff;color:#9C4A63;padding:3px 7px;border-radius:99px;border:1px solid #F3C2D2}
-.bl-bot{position:absolute;right:4%;bottom:6%;background:#7A2945;color:#fff;font-size:clamp(5px,.75vw,9px);padding:5px 9px;border-radius:10px 10px 2px 10px}
-/* Patitas */
-.pc{height:100%;background:#FFFBF2;display:flex;flex-direction:column}
-.pc-nav{display:flex;justify-content:space-between;align-items:center;padding:3% 5%;background:#2E7D6B;color:#fff;font-size:clamp(6px,.9vw,10px)}
-.pc-nav b{font-size:clamp(8px,1.2vw,13px)}
-.pc-cart{background:#FFB703;color:#2E3A2F;border-radius:99px;padding:2px 8px;font-weight:700}
-.pc-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:4%;padding:5%}
-.pc-item{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column;overflow:hidden}
-.pc-img{flex:1;display:grid;place-items:center;font-size:clamp(14px,3vw,34px)}
-.pc-item:nth-child(1) .pc-img{background:#E3F2EE}.pc-item:nth-child(2) .pc-img{background:#FFF0D1}.pc-item:nth-child(3) .pc-img{background:#FCE3DA}
-.pc-info{padding:6% 8%;font-size:clamp(5px,.8vw,9px);display:flex;justify-content:space-between}
-.pc-info b{color:#2E7D6B}
-.pc-pay{position:absolute;right:5%;bottom:5%;background:#635BFF;color:#fff;font-size:clamp(5px,.75vw,9px);padding:5px 10px;border-radius:6px;font-weight:600}
-/* Kevin Alva */
-.ka{height:100%;background:#0B0B0F;color:#F2EEE6;display:grid;grid-template-columns:1.1fr 1fr}
-.ka-hero{background:radial-gradient(circle at 30% 30%,#5B2A86 0,#1A0F2B 55%,#0B0B0F 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:7%}
-.ka-hero small{font-size:clamp(5px,.75vw,9px);letter-spacing:.2em;color:#C9A2FF}
-.ka-hero h4{margin:3% 0 0;font-size:clamp(12px,2.6vw,30px);letter-spacing:.04em;line-height:.95;font-weight:900}
-.ka-play{margin-top:6%;display:flex;align-items:center;gap:6px;font-size:clamp(5px,.8vw,9px)}
-.ka-play i{width:clamp(10px,1.6vw,18px);aspect-ratio:1;border-radius:50%;background:#1DB954}
-.ka-shows{padding:7% 8%;display:flex;flex-direction:column;gap:6%}
-.ka-shows small{font-size:clamp(5px,.8vw,9px);letter-spacing:.2em;color:#9C8FB5}
-.ka-show{display:grid;grid-template-columns:auto 1fr auto;gap:8%;align-items:center;border-bottom:1px solid #2A2433;padding-bottom:5%;font-size:clamp(5px,.85vw,10px)}
-.ka-show b{font-size:clamp(7px,1.2vw,13px);color:#C9A2FF}
-.ka-show span:last-child{border:1px solid #C9A2FF;padding:2px 6px;border-radius:99px;font-size:clamp(4px,.7vw,8px)}
-/* Cumple */
-.cs{height:100%;background:#8ED8FF;display:grid;place-items:center;position:relative}
-.cs-card{background:#fff;border:3px solid #1D2B53;border-radius:18px;box-shadow:5px 6px 0 #1D2B53;width:46%;padding:5% 4%;text-align:center;display:flex;flex-direction:column;gap:6px}
-.cs-card small{font-weight:800;font-size:clamp(5px,.8vw,9px);color:#1D2B53}
-.cs-card h4{margin:0;font-size:clamp(10px,2.2vw,24px);color:#FF5A4E;-webkit-text-stroke:1px #1D2B53;font-weight:900;line-height:1}
-.cs-row{border:2px solid #1D2B53;border-radius:8px;padding:3px 6px;font-size:clamp(5px,.75vw,9px);text-align:left;color:#1D2B53;font-weight:700;background:#FFF6D6}
-.cs-wa{background:#25D366;color:#fff;border:2px solid #1D2B53;border-radius:99px;padding:4px;font-size:clamp(5px,.75vw,9px);font-weight:800}
-.cs i{position:absolute;width:6px;height:10px;border-radius:2px}
-.cs-bal{position:absolute;top:8%;width:9%;aspect-ratio:.8;border-radius:50%;border:2px solid #1D2B53}
+/* maquetas dentro de los casos */
+.mock{width:100%;max-width:440px;background:#FFFDF9;color:#1B1714;border-radius:16px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);overflow:hidden;font-size:13px;transform:rotate(-1.5deg);transition:transform .5s}
+.case:hover .mock{transform:rotate(0) scale(1.02)}
+.mock__bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#EFE9E1;font-family:var(--mono);font-size:11px;color:#7A6F65}
+.mock__bar i{width:8px;height:8px;border-radius:50%;background:#D5CCC1}
+.mock__bar span{margin-left:8px;background:#FFFDF9;border-radius:6px;padding:3px 10px;flex:1}
+.mock__body{padding:16px}
+.v-dondog{background:radial-gradient(circle at 30% 20%,#E0457A,#8F1D45)}
+.v-kevin{background:radial-gradient(circle at 70% 30%,#3B3B4A,#0B0B10)}
+.v-ballo{background:radial-gradient(circle at 30% 30%,#FFC9DA,#F48FB1)}
+.v-n8n{background:radial-gradient(circle at 60% 30%,#3A2E57,#17121F)}
+/* don dog */
+.dd-head{display:flex;justify-content:space-between;align-items:center;background:#16120E;color:#F8F4EE;margin:-16px -16px 12px;padding:12px 16px;font-family:var(--display);font-weight:800;letter-spacing:.02em}
+.dd-head em{font-style:normal;background:#C8285F;border-radius:999px;padding:3px 10px;font-size:11px;font-family:var(--body)}
+.dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dd-p{border:1px solid #EAE2D8;border-radius:10px;padding:8px}
+.dd-p div{aspect-ratio:1;border-radius:8px;display:grid;place-items:center;font-size:26px;margin-bottom:6px}
+.dd-p b{display:block;font-size:12px}
+.dd-p small{color:#178A5C;font-size:10px;font-weight:600}
+.dd-pos{margin-top:10px;display:flex;justify-content:space-between;align-items:center;background:#16120E;color:#fff;border-radius:10px;padding:10px 12px;font-weight:600}
+.dd-pos span{background:#C8285F;border-radius:999px;padding:4px 12px;font-size:12px}
+/* kevin */
+.kv{background:#0E0E14;color:#fff}
+.kv .mock__bar{background:#1A1A24;color:#8A8AA0}.kv .mock__bar span{background:#0E0E14}
+.kv-title{font-family:var(--display);font-size:38px;font-weight:800;letter-spacing:.04em;line-height:.9}
+.kv-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #2A2A36;padding:9px 0;font-size:12px}
+.kv-row b{font-family:var(--mono)}
+.kv-row span{background:#fff;color:#000;border-radius:999px;padding:3px 10px;font-weight:700;font-size:11px}
+.kv-ticket{margin-top:10px;display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center;background:#1A1A24;border-radius:12px;padding:10px}
+.kv-qr{width:62px;height:62px;background:conic-gradient(#fff 0 25%,#000 0 50%,#fff 0 75%,#000 0) 0 0/12px 12px;border:4px solid #fff;border-radius:6px}
+.kv-ticket small{color:#2BD4B4;font-weight:700}
+/* ballonette */
+.bl-hero{background:linear-gradient(135deg,#FCE4EC,#F8BBD0);border-radius:12px;padding:16px;text-align:center}
+.bl-hero b{font-family:var(--display);font-size:20px;display:block;line-height:1.1}
+.bl-hero span{display:inline-block;margin-top:8px;background:#C2185B;color:#fff;border-radius:999px;padding:5px 14px;font-weight:700;font-size:11px}
+.bl-cats{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap}
+.bl-cats i{font-style:normal;border:1px solid #F3C1D3;border-radius:999px;padding:3px 10px;font-size:11px;color:#AD1457}
+.bl-bot{display:flex;gap:8px;align-items:center;background:#FFF0F5;border-radius:12px;padding:10px}
+.bl-bot b{width:30px;height:30px;border-radius:50%;background:#C2185B;color:#fff;display:grid;place-items:center;flex:none}
+/* n8n */
+.n8n{background:#1E1A26;color:#E6E1F0;padding:18px;border-radius:16px;width:100%;max-width:460px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.n8n-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.n8n-node{background:#2B2536;border:1.5px solid #4A4060;border-radius:10px;padding:8px 10px;font-size:12px;font-weight:600;display:flex;gap:6px;align-items:center}
+.n8n-node.ai{border-color:#9F7AEA}.n8n-node.if{border-color:#FF6D5A}.n8n-node.go{border-color:#5FD397}.n8n-node.rem{border-color:#F2C35B}
+.n8n-arrow{color:#6E6488;font-weight:800}
+.n8n-sep{height:1px;background:#3A3348;margin:14px 0}
+.n8n-test{margin-top:14px;font-family:var(--mono);font-size:11px;color:#5FD397}
 
-/* TIMELINE */
-.journey{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
-.journey-intro p{color:var(--muted);margin:16px 0 0;max-width:46ch}
-.journey-intro blockquote{margin:28px 0 0;padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:16px;font-family:var(--display);font-size:1.18rem;font-weight:500;line-height:1.35}
-.tl{list-style:none;margin:0;padding:0;position:relative}
-.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tl li{position:relative;padding:0 0 26px 36px}
-.tl li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--muted)}
-.tl li.tech::before{border-color:var(--accent);background:var(--accent)}
-.tl time{font:600 .78rem var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.tl h4{margin:2px 0 2px;font-family:var(--display);font-size:1.12rem;font-weight:700}
-.tl p{margin:0;color:var(--muted);font-size:.93rem}
+/* más proyectos */
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:transform .3s,border-color .3s}
+.mini:hover{transform:translateY(-4px);border-color:var(--orange)}
+.mini .em{font-size:30px}
+.mini h3{font-size:22px;font-weight:700}
+.mini p{color:var(--muted);font-size:14px}
+.mini .go{margin-top:auto;font-weight:700;color:var(--orange);font-size:14px}
+@media (max-width:900px){.more{grid-template-columns:1fr}}
 
-/* SKILLS */
-.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--surface)}
-.skill{padding:24px}
-.skill+.skill{border-left:1px solid var(--line)}
-.skill h4{margin:0 0 14px;font-family:var(--display);font-size:1.1rem}
-.skill .stack span{background:var(--bg)}
+/* proceso */
+.process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:p}
+.proc{position:relative;padding:28px 24px;border-radius:var(--r);background:var(--bg2);border:1px solid var(--line)}
+.proc::before{counter-increment:p;content:"0" counter(p);font-family:var(--display);font-weight:800;font-size:56px;line-height:1;color:var(--orange);opacity:.9;display:block;margin-bottom:18px}
+.proc h3{font-size:21px;font-weight:700;margin-bottom:8px}
+.proc p{color:var(--muted);font-size:15px}
+.proc .time{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--teal)}
+@media (max-width:900px){.process{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.process{grid-template-columns:1fr}}
 
-/* CONTACT */
-.contact{background:var(--navy);color:var(--bg);border-radius:28px;padding:56px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.contact h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-.02em}
-.contact p{opacity:.8;margin:14px 0 0;max-width:44ch}
-.contact .eyebrow{color:var(--accent)}
-.c-list{display:grid;gap:12px}
-.c-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border:1px solid color-mix(in srgb,var(--bg) 25%,transparent);border-radius:14px;flex-wrap:wrap}
-.c-item small{display:block;font:600 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.65}
-.c-item span,.c-item a{font-weight:600;word-break:break-all;text-decoration:none}
-.c-item button{font:600 .8rem var(--body);background:var(--accent);color:#1A1208;border:0;border-radius:99px;padding:8px 14px;cursor:pointer}
-footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* banda naranja */
+.band{background:var(--orange);color:var(--orange-ink);border-radius:32px;padding:56px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center;position:relative;overflow:hidden}
+.band::after{content:"";position:absolute;right:-80px;bottom:-120px;width:360px;height:360px;border-radius:50%;border:40px solid rgba(26,13,4,.08)}
+.band h2{font-size:clamp(32px,4.4vw,56px);font-weight:800}
+.band p{font-size:18px;margin-top:14px;max-width:48ch;opacity:.85}
+.band .btn{background:var(--orange-ink);color:var(--cream);justify-self:end;position:relative;z-index:1}
+@media (max-width:800px){.band{grid-template-columns:1fr;padding:36px 28px}.band .btn{justify-self:start}}
 
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr;gap:40px;padding-top:24px}
-  .portrait{max-width:300px;justify-self:start}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(3){border-left:0}
-  .stat:nth-child(n+3){border-top:1px solid var(--line)}
-  .projects{grid-template-columns:1fr}
-  .card.featured{grid-template-columns:1fr}
-  .journey{grid-template-columns:1fr;gap:36px}
-  .skills{grid-template-columns:1fr 1fr}
-  .skill:nth-child(3){border-left:0}
-  .skill:nth-child(n+3){border-top:1px solid var(--line)}
-  .contact{grid-template-columns:1fr;padding:36px 24px}
-  nav ul{display:none}
-}
-@media (max-width:480px){
-  .skills{grid-template-columns:1fr}
-  .skill+.skill{border-left:0;border-top:1px solid var(--line)}
-  .body{padding:22px 20px}
-  .preview,.featured .preview{padding:16px}
-  .status{left:8px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* sobre mí */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.about__img{position:relative;max-width:420px}
+.about__img img{border-radius:28px;aspect-ratio:1;object-fit:cover;width:100%;filter:saturate(.9)}
+.about__img::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--orange);border-radius:28px;z-index:-1}
+.about__badge{position:absolute;left:-14px;bottom:24px;background:var(--cream);color:var(--orange-ink);border-radius:16px;padding:12px 16px;font-weight:700;box-shadow:0 20px 40px -20px rgba(0,0,0,.6);font-size:14px}
+.about__badge b{display:block;font-family:var(--display);font-size:30px;line-height:1;color:var(--orange)}
+.about h2{font-size:clamp(34px,4.4vw,56px);font-weight:800;margin:12px 0 20px}
+.about p{color:var(--muted);font-size:17px}
+.about p+p{margin-top:14px}
+.about p b{color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.facts b{display:block;font-family:var(--display);font-size:32px;color:var(--orange);line-height:1}
+.facts span{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.about{grid-template-columns:1fr}.about__img{max-width:320px}}
 
-/* Indra-inspired: square edges, light display weight, slate hero band */
-.hero h1{font-weight:500!important;letter-spacing:-.035em!important}
-.hero h1 em{color:var(--accent)}
-.btn{border-radius:0;padding:15px 26px;font-size:1rem}
-.btn.primary{background:var(--navy);border-color:var(--navy);color:var(--bg)}
-.card,.skills,.journey-intro blockquote,.status,.c-item{border-radius:4px}
-.portrait img,.portrait::before{border-radius:4px}
-.contact{border-radius:4px}
-.contact .eyebrow{color:var(--accent-soft)}
-.c-item button{background:var(--bg);color:var(--navy);border-radius:0}
-.pill{border-radius:2px}
-.stack span{border-radius:2px}
-.links a{border-bottom-color:var(--accent)}
-.sec-head h2,.journey h2,.contact h2{font-weight:600!important}
-.stat b{font-weight:600}
-.topband{background:var(--surface);border-bottom:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
-.ka-show .buy{background:#C9A2FF;color:#0B0B0F;font-weight:700;border-color:#C9A2FF}
-.ka-ticket{margin-top:auto;display:grid;grid-template-columns:28% 1fr;gap:7%;align-items:center;background:#F2EEE6;color:#0B0B0F;border-radius:6px;padding:5%;font-size:clamp(4px,.7vw,8px)}
-.ka-ticket b{display:block;font-size:clamp(5px,.85vw,10px)}
-.ka-ticket span{display:block;color:#4b4458}
-.ka-ticket .ok{color:#1F8A55;font-weight:700}
-.ka-qr{aspect-ratio:1;max-width:100%}
-.ka-shows{gap:4%!important}
-.gi{height:100%;display:grid;grid-template-columns:1fr 1fr;background:#F7F4FF;font-family:system-ui,sans-serif}
-.gi-form{background:#fff;padding:5% 6%;display:flex;flex-direction:column;gap:4%;border-right:1px solid #E7E1F5;color:#1D2B53}
-.gi-form b{font-size:clamp(7px,1.15vw,13px)}
-.gi-form label{display:flex;flex-direction:column;font-size:clamp(4px,.65vw,8px);color:#6b6f86;gap:2px}
-.gi-form label span{border:1px solid #DCD6EE;border-radius:4px;padding:2px 5px;color:#1D2B53;font-size:clamp(5px,.75vw,9px);background:#FBFAFF}
-.gi-colors{display:flex;gap:5px}
-.gi-colors i{width:clamp(7px,1.1vw,13px);aspect-ratio:1;border-radius:50%;border:1px solid #1D2B53}
-.gi-colors i.on{box-shadow:0 0 0 2px #fff,0 0 0 3px #1D2B53}
-.gi-btns{display:flex;gap:4px;margin-top:auto;flex-wrap:wrap}
-.gi-btns span{font-size:clamp(4px,.65vw,8px);padding:3px 6px;border-radius:99px;border:1px solid #1D2B53;font-weight:700}
-.gi-btns .wa{background:#25D366;color:#fff;border-color:#128C4A}
-.gi-prev{background:#FFB3D1;display:grid;place-items:center;padding:5%}
-.gi-prev .cs-card{width:88%}
+/* tecnologías */
+.tech{display:flex;flex-wrap:wrap;gap:10px}
+.tech span{border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:9px 16px;font-weight:600;font-size:14px;color:var(--muted)}
+
+/* preguntas */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-family:var(--display);font-size:21px;font-weight:700}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--orange);font-size:28px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 0 22px;max-width:70ch}
+
+/* contacto */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.contact h2{font-size:clamp(40px,5.6vw,76px);font-weight:800;margin:12px 0 20px}
+.contact h2 em{font-style:normal;color:var(--orange)}
+.contact .lead{margin-bottom:28px}
+.channels{display:grid;gap:10px}
+.channels a{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;transition:border-color .2s}
+.channels a:hover{border-color:var(--orange)}
+.channels small{display:block;color:var(--dim);font-size:12px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.channels .ci{width:42px;height:42px;border-radius:12px;background:#2C2520;display:grid;place-items:center;font-size:20px;flex:none}
+form.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.card .full{grid-column:1/-1}
+label.f{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:var(--muted)}
+.f input,.f select,.f textarea{background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;font-size:16px;color:var(--ink);width:100%;transition:border-color .2s}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--orange)}
+.f textarea{min-height:120px;resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:9px 15px;font-size:14px;font-weight:600;transition:all .2s}
+.chips input:checked+span{background:var(--orange);border-color:var(--orange);color:var(--orange-ink)}
+.chips input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between}
+.form-foot small{color:var(--dim);font-size:13px;max-width:36ch}
+.msg{grid-column:1/-1;border-radius:14px;padding:14px 16px;font-weight:600;font-size:15px}
+.msg.ok{background:rgba(43,212,180,.14);color:var(--teal)}
+.msg.err{background:rgba(255,106,26,.14);color:var(--orange2)}
+.msg a{color:inherit}
+.hp{position:absolute;left:-9999px}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+@media (max-width:560px){form.card{grid-template-columns:1fr;padding:22px}}
+
+/* pie */
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+
+/* botón flotante de WhatsApp */
+.wa{position:fixed;right:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px}
+
+/* aparición al hacer scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<div class="topband"><div class="wrap">
-<nav>
-  <a class="logo" href="#top">erwin<span>.</span>dev</a>
-  <ul>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#trayectoria">Trayectoria</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><a href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-  </ul>
-</nav>
-</div></div>
-<div class="wrap">
-
-<header class="hero" id="top">
-  <div>
-    <div class="eyebrow">Automatización · IA · Full Stack · Madrid</div>
-    <h1>Erwin A.<br>González <em>Bonilla</em></h1>
-    <p class="pitch">Automatizo el trabajo repetitivo de los negocios con <strong>n8n e IA</strong>: flujos que reciben solicitudes, las priorizan, agendan citas y envían recordatorios sin intervención manual, chatbots con la API de OpenAI y agentes con LLMs. También construyo las webs y APIs que los sostienen con <strong>React y Python</strong>. Antes de programar gestioné inventario, proveedores y equipos durante más de 15 años, así que sé qué tareas merece la pena automatizar.</p>
-    <div class="ctas">
-      <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
-      <a class="btn" href="CV-Erwin-Gonzalez-Bonilla.pdf" target="_blank" rel="noopener">Ver CV ↗</a>
-      <a class="btn" href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="https://github.com/ErwinGonzalezBonilla" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Orange Street Automation, inicio"><img src="/img/logo.svg" alt="" width="40" height="40"><span><b>Orange Street</b><small>Automation</small></span></a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#proceso">Cómo trabajo</a><a href="#sobre-mi">Quién soy</a><a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn--orange" href="#contacto"><span class="hide-sm">Pide tu presupuesto</span><span class="show-sm">Presupuesto</span></a>
   </div>
-  <figure class="portrait" style="margin:0">
-    <img src="img/erwin.jpg" alt="Retrato de Erwin González Bonilla" width="520" height="520">
-    <figcaption class="status"><span class="dot"></span>Abierto a ofertas · Madrid / remoto</figcaption>
-  </figure>
 </header>
 
-<div class="stats">
-  <div class="stat"><b>138</b><span>contribuciones en GitHub en 2026</span></div>
-  <div class="stat"><b>6</b><span>proyectos publicados</span></div>
-  <div class="stat"><b>2</b><span>webs en producción en Vercel</span></div>
-  <div class="stat"><b>15+</b><span>años gestionando operaciones</span></div>
-</div>
-
-<section id="proyectos">
-  <div class="sec-head">
-    <div><div class="eyebrow">Portfolio</div><h2>Proyectos</h2></div>
-    <p>Seis proyectos: un sistema de automatización con n8n e IA (solicitudes, citas y recordatorios), un SaaS con IA en desarrollo, dos webs entregadas a clientes reales con dominio propio (una con venta de entradas y pagos con Stripe), un proyecto en equipo y una herramienta pública para crear invitaciones.</p>
-  </div>
-
-  <div class="projects">
-
-    <!-- Automatización: solicitudes, citas y recordatorios (n8n) -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">n8n · solicitudes, citas y recordatorios</span></div>
-          <div class="screen"><svg class="n8" viewBox="0 0 320 200" width="100%" height="100%" font-family="system-ui,sans-serif">
-            <defs><pattern id="n8dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#3A3A42"/></pattern></defs>
-            <rect width="320" height="200" fill="#232328"/><rect width="320" height="200" fill="url(#n8dots)"/>
-            <text x="12" y="16" font-size="7.5" fill="#9A9AA6">1 · Solicitudes y citas</text>
-            <text x="308" y="16" font-size="7" fill="#5FD397" text-anchor="end">✓ Tests OK</text>
-            <line x1="12" y1="136" x2="308" y2="136" stroke="#3A3A42"/>
-            <text x="12" y="147" font-size="7.5" fill="#9A9AA6">2 · Recordatorios</text>
-            <g fill="none" stroke-width="1.5">
-              <path d="M48 44H60M96 44H108M202 44H214M250 44H262" stroke="#8C8C99"/>
-              <path d="M144 44H166" stroke="#5FD397"/>
-              <path d="M144 44C155 44 155 98 166 98" stroke="#8C8C99"/>
-              <path d="M48 164H70M106 164H166M202 164H214M250 164H262" stroke="#8C8C99"/>
-            </g>
-            <text x="155" y="39" font-size="6" fill="#5FD397" text-anchor="middle">true</text>
-            <text x="150" y="86" font-size="6" fill="#9A9AA6" text-anchor="middle">false</text>
-            <rect x="12" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="30" y="50" font-size="15" text-anchor="middle">📝</text><text x="30" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Formulario</text><rect x="60" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#9F7AEA" stroke-width="1.3"/><text x="78" y="50" font-size="15" text-anchor="middle">🤖</text><text x="78" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">IA</text><rect x="108" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#FF6D5A" stroke-width="1.3"/><text x="126" y="50" font-size="15" text-anchor="middle">🔀</text><text x="126" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">IF ≥ 300 €</text><rect x="166" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#5FD397" stroke-width="1.3"/><text x="184" y="50" font-size="15" text-anchor="middle">🗓️</text><text x="184" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Agenda</text><rect x="214" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#5FD397" stroke-width="1.3"/><text x="232" y="50" font-size="15" text-anchor="middle">📆</text><text x="232" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Calendar</text><rect x="262" y="26" width="36" height="36" rx="6" fill="#33333B" stroke="#5FD397" stroke-width="1.3"/><text x="280" y="50" font-size="15" text-anchor="middle">✅</text><text x="280" y="73" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Confirmación</text><rect x="166" y="80" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="184" y="104" font-size="15" text-anchor="middle">📋</text><text x="184" y="127" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Pendiente</text><rect x="12" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="30" y="170" font-size="15" text-anchor="middle">⏱️</text><text x="30" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Cada hora</text><rect x="70" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#55555F" stroke-width="1.3"/><text x="88" y="170" font-size="15" text-anchor="middle">📊</text><text x="88" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Citas</text><rect x="166" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#F2C35B" stroke-width="1.3"/><text x="184" y="170" font-size="15" text-anchor="middle">⏰</text><text x="184" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Día antes</text><rect x="214" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#F2C35B" stroke-width="1.3"/><text x="232" y="170" font-size="15" text-anchor="middle">📍</text><text x="232" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Mismo día</text><rect x="262" y="146" width="36" height="36" rx="6" fill="#33333B" stroke="#F2C35B" stroke-width="1.3"/><text x="280" y="170" font-size="15" text-anchor="middle">💬</text><text x="280" y="192" font-size="6.5" fill="#D6D6DE" text-anchor="middle">Seguimiento</text>
-          </svg></div>
+<main id="inicio">
+  <!-- PORTADA -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill"><i></i>Aceptando proyectos para noviembre</span>
+        <h1>Tu negocio, en <em>piloto automático</em>.</h1>
+        <p class="lead">Creamos <b>webs que venden</b>, <b>tiendas online con pagos</b> y <b>automatizaciones con IA</b> que responden a tus clientes, agendan citas y hacen el seguimiento por ti. Menos tareas repetitivas, más ventas.</p>
+        <div class="cta-row">
+          <a class="btn btn--orange" href="#contacto">Quiero automatizar mi negocio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="#trabajos">Ver trabajos</a>
         </div>
+        <div class="trust"><span>Han confiado en nosotros:</span><b>Kevin Alva</b><b>Ballonette</b><b>Don Dog</b></div>
       </div>
-      <div class="body">
-        <div class="meta"><span class="pill wip">● En pruebas</span><span class="pill kind">Automatización · n8n · IA</span></div>
-        <h3>Solicitudes, citas y recordatorios con n8n</h3>
-        <p class="desc">Sistema de automatización para un negocio de servicios: recibe las solicitudes de los clientes, las analiza con IA, da prioridad a los presupuestos de 300 € o más, agenda la cita en la primera hora libre y envía los recordatorios solo. Sin apuntar nada a mano.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Prioridad por presupuesto con un nodo IF: desde 300 € el cliente recibe su cita confirmada al momento; el resto queda pendiente de agendar y el negocio recibe el aviso.</li>
-          <li>Gestor de citas sin solapes: respeta horario, días laborables y antelación mínima; si la hora pedida está ocupada, asigna la siguiente libre y crea el evento en Google Calendar.</li>
-          <li>Recordatorios automáticos por correo el día antes y el mismo día, seguimiento después de la cita y agenda diaria para el negocio, sin enviar nunca un aviso dos veces.</li>
-          <li>IA con OpenAI que resume cada solicitud y redacta un mensaje personalizado; si falla, el flujo sigue.</li>
-          <li>Alertas de error por email y lógica de los nodos probada con tests automáticos (fines de semana, huecos ocupados, cambio de hora…).</li>
-        </ul>
-        <div class="stack"><span>n8n</span><span>OpenAI API</span><span>Google Sheets</span><span>Google Calendar</span><span>Gmail</span><span>JavaScript</span><span>Luxon</span><span>Tests</span></div>
-        <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/n8n-gestion-solicitudes-clientes" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
-      </div>
-    </article>
 
-    <!-- MyStock -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">mystock · panel de inventario</span></div>
-          <div class="screen"><div class="ms">
-            <div class="ms-side"><b>MyStock</b><s class="on"></s><s></s><s></s><s></s><s></s></div>
-            <div class="ms-main">
-              <div class="ms-kpis">
-                <div class="ms-kpi"><small>Ventas hoy</small><strong>1.284 €</strong></div>
-                <div class="ms-kpi"><small>Productos</small><strong>342</strong></div>
-                <div class="ms-kpi low"><small>Stock bajo</small><strong>7</strong></div>
-              </div>
-              <div class="ms-chart"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:92%"></i><i style="height:70%"></i></div>
-              <div class="ms-chat"><span class="q">¿Qué productos debo reponer esta semana?</span><span class="a">🤖 7 productos bajo mínimo. Te propongo un pedido a 2 proveedores…</span></div>
-            </div>
-          </div></div>
-        </div>
+      <div class="flow" aria-label="Ejemplo de una automatización funcionando">
+        <div class="flow__head"><span></span><span></span><span></span>&nbsp;automatizacion.flow<b id="flowState">● en vivo</b></div>
+        <div class="step"><div class="ic" style="background:rgba(37,211,102,.16)">💬</div><div><b>Llega un mensaje</b><small>“¿Tienen hora el jueves para un corte?”</small></div><div class="ok">✓</div></div>
+        <div class="step"><div class="ic" style="background:rgba(185,166,255,.16)">🤖</div><div><b>La IA lo entiende</b><small>Servicio: corte · Día: jueves · Cliente nuevo</small></div><div class="ok">✓</div></div>
+        <div class="step"><div class="ic" style="background:rgba(43,212,180,.16)">📅</div><div><b>Agenda la cita</b><small>Jueves 17:30 · sin choques de horario</small></div><div class="ok">✓</div></div>
+        <div class="step"><div class="ic" style="background:rgba(255,201,74,.16)">⏰</div><div><b>Envía el recordatorio</b><small>El día antes y 2 horas antes</small></div><div class="ok">✓</div></div>
+        <div class="flow__foot"><span>Tiempo que dedicaste tú</span><b>0 min</b></div>
       </div>
-      <div class="body">
-        <div class="meta"><span class="pill wip">● En desarrollo</span><span class="pill kind">SaaS · IA</span><span class="commits">85 commits</span></div>
-        <h3>MyStock</h3>
-        <p class="desc">Plataforma SaaS multiempresa para que pequeños negocios gestionen inventario, punto de venta, compras, ventas, clientes y proveedores desde un solo sitio, con un asistente de IA que sugiere qué reponer y automatizaciones con n8n para las tareas repetitivas.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Arquitectura completa por capas: React → FastAPI → SQLAlchemy → PostgreSQL → servicios de IA → n8n.</li>
-          <li>Diseño multi-tenant, autenticación JWT y despliegue planificado en Vercel + Railway.</li>
-          <li>Proyecto tratado como producto: documentación, roadmap, changelog, guía de contribución y licencia.</li>
-          <li>Conoce el problema desde dentro: años gestionando inventario y proveedores en tienda.</li>
-        </ul>
-        <div class="stack"><span>React</span><span>Vite</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>JWT</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>n8n</span></div>
-        <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/MyStock" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
-      </div>
-    </article>
+    </div>
+  </section>
 
-    <!-- Ballonette -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">ballonette.com</span></div>
-          <div class="screen"><div class="bl">
-            <div class="bl-nav"><b>Ballonette</b><span>Galería · Servicios · Contacto</span></div>
-            <div class="bl-hero">
-              <div class="bl-copy"><h4>Globos, rosas y catering para tu evento</h4><span>Pide presupuesto</span></div>
-              <div class="bl-balloons"><i></i><i></i><i></i></div>
-            </div>
-            <div class="bl-tags"><span>Bodas</span><span>Cumpleaños</span><span>Baby Shower</span><span>Corporativo</span></div>
-            <div class="bl-bot">💬 BalloonBot: ¿qué evento celebras?</div>
-          </div></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Entregado · dominio propio</span><span class="pill kind">Cliente real · IA</span></div>
-        <h3>Ballonette</h3>
-        <p class="desc">Web oficial de Ballonette Eventos, una empresa de decoración con globos en Madrid, ya publicada en su dominio ballonette.com. Tiene galería por categorías, panel de administración para subir fotos y BalloonBot, un chatbot conectado a OpenAI que atiende a los clientes.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>SPA con React Router y rutas dinámicas por categoría (/galeria/bodas…).</li>
-          <li>Subida de imágenes en tiempo real a Cloudinary desde un panel admin.</li>
-          <li>Visor lightbox con zoom, teclado y navegación accesible.</li>
-          <li>Proyecto entregado a un cliente real, con dominio propio, deploy continuo desde GitHub a Vercel y diseño optimizado para móvil.</li>
-        </ul>
-        <div class="stack"><span>React</span><span>Vite</span><span>React Router</span><span>Cloudinary</span><span>OpenAI API</span><span>Vercel</span></div>
-        <div class="links"><a href="https://ballonette.com" target="_blank" rel="noopener">Ver web ↗</a><a href="https://github.com/ErwinGonzalezBonilla/ballonette-react" target="_blank" rel="noopener">Código ↗</a></div>
-      </div>
-    </article>
+  <div class="marquee" aria-hidden="true"><div class="marquee__in">
+    <span>Webs a medida</span><span>Tiendas online</span><span>Pagos con Stripe y Webpay</span><span>Chatbots con IA</span><span>Automatizaciones n8n</span><span>WhatsApp</span><span>Paneles de gestión</span><span>Punto de venta</span>
+    <span>Webs a medida</span><span>Tiendas online</span><span>Pagos con Stripe y Webpay</span><span>Chatbots con IA</span><span>Automatizaciones n8n</span><span>WhatsApp</span><span>Paneles de gestión</span><span>Punto de venta</span>
+  </div></div>
 
-    <!-- Kevin Alva -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">www.kevinalvamusic.com</span></div>
-          <div class="screen"><div class="ka">
-            <div class="ka-hero"><small>WEB OFICIAL</small><h4>KEVIN<br>ALVA</h4><div class="ka-play"><i></i>Escuchar en Spotify</div></div>
-            <div class="ka-shows"><small>PRÓXIMOS SHOWS</small>
-              <div class="ka-show"><b>07 NOV</b><span>Tallinn</span><span>Entradas</span></div>
-              <div class="ka-show"><b>19 NOV</b><span>Madrid</span><span class="buy">Comprar</span></div>
-              <div class="ka-show"><b>21 NOV</b><span>Barcelona</span><span class="buy">Comprar</span></div>
-              <div class="ka-ticket"><div class="ka-qr"><svg viewBox="-1 -1 23 23" width="100%" height="100%"><rect x="-1" y="-1" width="23" height="23" fill="#fff"/><rect x="0" y="0" width="7" height="7" fill="#0B0B0F"/><rect x="1" y="1" width="5" height="5" fill="#fff"/><rect x="2" y="2" width="3" height="3" fill="#0B0B0F"/><rect x="14" y="0" width="7" height="7" fill="#0B0B0F"/><rect x="15" y="1" width="5" height="5" fill="#fff"/><rect x="16" y="2" width="3" height="3" fill="#0B0B0F"/><rect x="0" y="14" width="7" height="7" fill="#0B0B0F"/><rect x="1" y="15" width="5" height="5" fill="#fff"/><rect x="2" y="16" width="3" height="3" fill="#0B0B0F"/><path d="M8 0h1v1h-1zM9 0h1v1h-1zM11 0h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM11 1h1v1h-1zM12 1h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM9 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM9 6h1v1h-1zM11 6h1v1h-1zM12 6h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1zM11 7h1v1h-1zM0 8h1v1h-1zM1 8h1v1h-1zM4 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM0 9h1v1h-1zM4 9h1v1h-1zM7 9h1v1h-1zM9 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM0 10h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM4 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM12 10h1v1h-1zM13 10h1v1h-1zM14 10h1v1h-1zM17 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM20 10h1v1h-1zM0 11h1v1h-1zM2 11h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM5 11h1v1h-1zM12 11h1v1h-1zM17 11h1v1h-1zM18 11h1v1h-1zM19 11h1v1h-1zM0 12h1v1h-1zM1 12h1v1h-1zM2 12h1v1h-1zM3 12h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM20 12h1v1h-1zM8 13h1v1h-1zM9 13h1v1h-1zM10 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM18 13h1v1h-1zM20 13h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM16 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM9 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM8 17h1v1h-1zM11 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM19 17h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM18 18h1v1h-1zM9 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM17 19h1v1h-1zM20 19h1v1h-1zM8 20h1v1h-1zM9 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM14 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM20 20h1v1h-1z" fill="#0B0B0F"/></svg></div><div><b>ENTRADA · MADRID</b><span>19 NOV · Barracuda Rock Bar</span><span class="ok">✓ Pagado con Stripe</span></div></div>
-            </div>
-          </div></div>
-        </div>
+  <!-- SERVICIOS -->
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="kicker">Servicios</p><h2>Lo que hacemos por tu negocio</h2></div>
+        <p>Proyectos con precio cerrado, entregados en semanas y pensados para que tú los uses sin depender de un programador cada día.</p>
       </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Entregado · en producción</span><span class="pill kind">Cliente real · Pagos</span></div>
-        <h3>Kevin Alva · Web y venta de entradas</h3>
-        <p class="desc">Web oficial de un artista musical en su propio dominio, con agenda de conciertos, discografía, Spotify y YouTube. Incluye un sistema de venta de entradas: el fan paga con Stripe, recibe una entrada con QR y en la puerta se valida con la cámara del móvil.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Pagos reales con Stripe Checkout: tarjeta, Apple Pay y Google Pay.</li>
-          <li>Backend serverless con funciones de Vercel en Node.js, sin base de datos: las compras se guardan en Stripe.</li>
-          <li>Entradas con QR firmados con HMAC-SHA256 para que no se puedan falsificar, y PIN para el personal de la puerta.</li>
-          <li>Escáner en el navegador con BarcodeDetector y jsQR como respaldo; las claves secretas viven en variables de entorno de Vercel.</li>
-          <li>Proyecto completo para un cliente: diseño, desarrollo, dominio propio y despliegue continuo con GitHub + Vercel.</li>
-        </ul>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Vercel Functions</span><span>Stripe Checkout</span><span>HMAC-SHA256</span><span>qrcode-generator</span><span>jsQR</span></div>
-        <div class="links"><a href="https://www.kevinalvamusic.com" target="_blank" rel="noopener">Ver web ↗</a><a href="https://github.com/ErwinGonzalezBonilla/kevin-alva-web" target="_blank" rel="noopener">Código ↗</a></div>
+      <div class="services">
+        <article class="svc reveal">
+          <div class="ico" style="background:rgba(255,106,26,.16);color:var(--orange)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></div>
+          <h3>Webs que venden</h3>
+          <p>Tu web profesional, rápida y lista para que Google te encuentre y tus clientes te escriban.</p>
+          <ul><li>Diseño a medida y móvil</li><li>Dominio y correo propio</li><li>Formularios y reservas</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="ico" style="background:rgba(43,212,180,.16);color:var(--teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg></div>
+          <h3>Tiendas online</h3>
+          <p>Vende 24/7 con pagos reales, stock en vivo y un panel fácil para gestionar tus pedidos.</p>
+          <ul><li>Stripe, Webpay, Mercado Pago</li><li>Correos automáticos</li><li>Stock web y tienda unido</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="ico" style="background:rgba(185,166,255,.16);color:var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M5 9h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"/><circle cx="9" cy="14" r="1.3"/><circle cx="15" cy="14" r="1.3"/></svg></div>
+          <h3>Asistentes con IA</h3>
+          <p>Un asistente que atiende a tus clientes en tu web o WhatsApp, responde dudas y recomienda productos.</p>
+          <ul><li>Entrenado con tu negocio</li><li>Captura de contactos</li><li>Disponible siempre</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="ico" style="background:rgba(255,201,74,.16);color:var(--yellow)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M7.5 12h4l5-6M11.5 12l5 6"/></svg></div>
+          <h3>Automatizaciones</h3>
+          <p>Conectamos tus herramientas para que las tareas repetitivas se hagan solas, sin errores.</p>
+          <ul><li>Citas y recordatorios</li><li>Pedidos a Google Sheets</li><li>Reportes y avisos</li></ul>
+        </article>
       </div>
-    </article>
+    </div>
+  </section>
 
-    <!-- Patitas Club -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">patitas-club · tienda</span></div>
-          <div class="screen"><div class="pc">
-            <div class="pc-nav"><b>🐾 Patitas Club</b><span class="pc-cart">🛒 3</span></div>
-            <div class="pc-grid">
-              <div class="pc-item"><div class="pc-img">🦴</div><div class="pc-info"><span>Snack dental</span><b>6,90 €</b></div></div>
-              <div class="pc-item"><div class="pc-img">🧶</div><div class="pc-info"><span>Juguete gato</span><b>4,50 €</b></div></div>
-              <div class="pc-item"><div class="pc-img">🛏️</div><div class="pc-info"><span>Cama perro</span><b>29,00 €</b></div></div>
-            </div>
-            <div class="pc-pay">Pagar con Stripe</div>
-          </div></div>
-        </div>
+  <!-- TRABAJOS -->
+  <section class="sec" id="trabajos" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="kicker">Trabajos</p><h2>Proyectos reales, negocios reales</h2></div>
+        <p>Cada proyecto empezó con un problema concreto del negocio. Esto es lo que construimos y lo que resolvió.</p>
       </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Terminado</span><span class="pill kind">Proyecto en equipo</span><span class="commits">411 commits</span></div>
-        <h3>Patitas Club</h3>
-        <p class="desc">E-commerce de productos para mascotas desarrollado en equipo como proyecto final del bootcamp Full Stack de 4Geeks Academy.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>Full stack completo: frontend React y API REST en Python/Flask.</li>
-          <li>Login seguro con JWT y modelos de datos con SQLAlchemy y migraciones.</li>
-          <li>Pasarela de pago real integrada con Stripe.</li>
-          <li>Trabajo en equipo con Git: ramas, pull requests e issues.</li>
-        </ul>
-        <div class="stack"><span>React</span><span>Python</span><span>Flask</span><span>SQLAlchemy</span><span>JWT</span><span>Stripe</span></div>
-        <div class="links"><a href="https://github.com/4GeeksAcademy/PatitasClub" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
-      </div>
-    </article>
 
-
-    <!-- Generador de invitaciones -->
-    <article class="card featured">
-      <div class="preview">
-        <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">generador-invitaciones.vercel.app</span></div>
-          <div class="screen"><div class="gi">
-            <div class="gi-form">
-              <b>Crea tu invitación 🎈</b>
-              <label>Nombre<span>Lucía</span></label>
-              <label>Cumple<span>7 años</span></label>
-              <label>Fecha<span>Sábado 14 nov · 17:00</span></label>
-              <label>WhatsApp<span>+34 600 000 000</span></label>
-              <div class="gi-colors"><i style="background:#8ED8FF"></i><i style="background:#FFB3D1" class="on"></i><i style="background:#9EE6C4"></i><i style="background:#CDB6FF"></i></div>
-              <div class="gi-btns"><span>Copiar enlace</span><span class="wa">Enviar por WhatsApp</span></div>
-            </div>
-            <div class="gi-prev">
-              <div class="cs-card">
-                <small>¡Estás invitado al cumple de</small>
-                <h4>Lucía!</h4>
-                <div class="cs-row">📅 Sábado 14 nov · 17:00</div>
-                <div class="cs-row" style="background:#E6F8EE">📍 Ver en Google Maps</div>
-                <div class="cs-wa">Confirmar por WhatsApp</div>
+      <div class="cases">
+        <!-- Don Dog -->
+        <article class="case reveal">
+          <div class="case__vis v-dondog">
+            <div class="mock"><div class="mock__bar"><i></i><i></i><i></i><span>dondog · tienda online</span></div>
+              <div class="mock__body">
+                <div class="dd-head">DON DOG <em>Despacho 24 h</em></div>
+                <div class="dd-grid">
+                  <div class="dd-p"><div style="background:#FBE1EA">🥩</div><b>Alimento 15 kg</b><small>● 10 en stock</small></div>
+                  <div class="dd-p"><div style="background:#D8F3EF">🦴</div><b>Snack dental</b><small>● 30 en stock</small></div>
+                  <div class="dd-p"><div style="background:#DCF0E5">🎾</div><b>Pelota</b><small>● 9 en stock</small></div>
+                </div>
+                <div class="dd-pos">Venta en tienda · 2 productos <span>Cobrar $35.980</span></div>
               </div>
             </div>
-          </div></div>
+          </div>
+          <div class="case__txt">
+            <div class="case__meta"><span class="tag live">● En lanzamiento</span><span class="tag">E-commerce · Punto de venta</span></div>
+            <h3>Don Dog</h3>
+            <p class="client">Pet shop · Santiago de Chile</p>
+            <p class="desc">La tienda física necesitaba vender online sin descontrolar el stock. Construimos una tienda online con pagos y un punto de venta en el mismo panel: lo que se vende en el local se descuenta al instante en la web.</p>
+            <ul class="results">
+              <li>Pagos con Webpay, Mercado Pago y transferencia</li>
+              <li>Correos automáticos al cliente y al dueño en cada pedido</li>
+              <li>Punto de venta con escáner de códigos de barras desde el móvil</li>
+            </ul>
+            <div class="stack"><span>Node.js</span><span>Express</span><span>Turso</span><span>Webpay</span><span>Mercado Pago</span><span>Vercel</span></div>
+            <div class="case__links"><a href="https://dondog-ten.vercel.app" target="_blank" rel="noopener">Ver tienda ↗</a><a class="alt" href="https://github.com/ErwinGonzalezBonilla/dondog" target="_blank" rel="noopener">Código</a></div>
+          </div>
+        </article>
+
+        <!-- Kevin Alva -->
+        <article class="case reveal">
+          <div class="case__vis v-kevin">
+            <div class="mock kv"><div class="mock__bar"><i></i><i></i><i></i><span>kevinalvamusic.com</span></div>
+              <div class="mock__body">
+                <div class="kv-title">KEVIN<br>ALVA</div>
+                <div style="margin-top:10px">
+                  <div class="kv-row"><b>07 NOV</b>Tallinn<span>Entradas</span></div>
+                  <div class="kv-row"><b>19 NOV</b>Madrid<span>Comprar</span></div>
+                  <div class="kv-row"><b>21 NOV</b>Barcelona<span>Comprar</span></div>
+                </div>
+                <div class="kv-ticket"><div class="kv-qr"></div><div><b>Entrada · Madrid</b><br><small>✓ Pagado con Stripe</small></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="case__txt">
+            <div class="case__meta"><span class="tag live">● En producción</span><span class="tag">Web · Venta de entradas</span></div>
+            <h3>Kevin Alva</h3>
+            <p class="client">Artista musical · dominio propio</p>
+            <p class="desc">Web oficial con agenda de conciertos, música y venta de entradas propia: el fan paga, recibe su entrada con QR y en la puerta se valida con la cámara del móvil. Sin comisiones de plataformas de terceros.</p>
+            <ul class="results">
+              <li>Pagos reales con tarjeta, Apple Pay y Google Pay</li>
+              <li>Entradas con QR firmado que no se pueden falsificar</li>
+              <li>Escáner en el navegador para el personal de la puerta</li>
+            </ul>
+            <div class="stack"><span>JavaScript</span><span>Stripe Checkout</span><span>Vercel Functions</span><span>QR</span></div>
+            <div class="case__links"><a href="https://www.kevinalvamusic.com" target="_blank" rel="noopener">Ver web ↗</a><a class="alt" href="https://github.com/ErwinGonzalezBonilla/kevin-alva-web" target="_blank" rel="noopener">Código</a></div>
+          </div>
+        </article>
+
+        <!-- Ballonette -->
+        <article class="case reveal">
+          <div class="case__vis v-ballo">
+            <div class="mock"><div class="mock__bar"><i></i><i></i><i></i><span>ballonette.com</span></div>
+              <div class="mock__body">
+                <div class="bl-hero"><b>Globos, rosas y catering para tu evento</b><span>Pide presupuesto</span></div>
+                <div class="bl-cats"><i>Bodas</i><i>Cumpleaños</i><i>Baby shower</i><i>Corporativo</i></div>
+                <div class="bl-bot"><b>🎈</b><span><strong>BalloonBot:</strong> ¡Hola! ¿Qué evento celebras?</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="case__txt">
+            <div class="case__meta"><span class="tag live">● En producción</span><span class="tag">Web · Chatbot IA</span></div>
+            <h3>Ballonette</h3>
+            <p class="client">Decoración de eventos · Madrid</p>
+            <p class="desc">Web oficial con galería por tipo de evento que la propia dueña actualiza desde un panel, y BalloonBot, un asistente con IA que atiende a los clientes y los lleva a pedir presupuesto.</p>
+            <ul class="results">
+              <li>Galería autogestionable: sube fotos sin llamar a nadie</li>
+              <li>Chatbot con IA que responde y capta clientes</li>
+              <li>Dominio propio y diseño pensado para el móvil</li>
+            </ul>
+            <div class="stack"><span>React</span><span>Cloudinary</span><span>OpenAI</span><span>Vercel</span></div>
+            <div class="case__links"><a href="https://ballonette.com" target="_blank" rel="noopener">Ver web ↗</a><a class="alt" href="https://github.com/ErwinGonzalezBonilla/ballonette-react" target="_blank" rel="noopener">Código</a></div>
+          </div>
+        </article>
+
+        <!-- n8n -->
+        <article class="case reveal">
+          <div class="case__vis v-n8n">
+            <div class="n8n">
+              <div class="n8n-row"><span class="n8n-node">📝 Formulario</span><span class="n8n-arrow">→</span><span class="n8n-node ai">🤖 IA</span><span class="n8n-arrow">→</span><span class="n8n-node if">🔀 ≥ 300 €</span><span class="n8n-arrow">→</span><span class="n8n-node go">📆 Calendar</span></div>
+              <div class="n8n-sep"></div>
+              <div class="n8n-row"><span class="n8n-node">⏱️ Cada hora</span><span class="n8n-arrow">→</span><span class="n8n-node rem">⏰ Día antes</span><span class="n8n-arrow">→</span><span class="n8n-node rem">📍 Mismo día</span><span class="n8n-arrow">→</span><span class="n8n-node">💬 Seguimiento</span></div>
+              <div class="n8n-test">✓ tests ok · fines de semana · huecos ocupados · cambio de hora</div>
+            </div>
+          </div>
+          <div class="case__txt">
+            <div class="case__meta"><span class="tag">Automatización · n8n + IA</span></div>
+            <h3>Solicitudes, citas y recordatorios</h3>
+            <p class="client">Para negocios de servicios</p>
+            <p class="desc">Un sistema que recibe las solicitudes de los clientes, las resume con IA, prioriza los presupuestos grandes, agenda la cita en el primer hueco libre y envía los recordatorios. Sin apuntar nada a mano.</p>
+            <ul class="results">
+              <li>Citas confirmadas al momento para los presupuestos de 300 € o más</li>
+              <li>Agenda sin solapes que respeta horarios y días laborables</li>
+              <li>Recordatorios y seguimiento automáticos por correo</li>
+            </ul>
+            <div class="stack"><span>n8n</span><span>OpenAI</span><span>Google Calendar</span><span>Google Sheets</span><span>Gmail</span></div>
+            <div class="case__links"><a href="https://github.com/ErwinGonzalezBonilla/n8n-gestion-solicitudes-clientes" target="_blank" rel="noopener">Ver el flujo ↗</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="more">
+        <a class="mini reveal" href="https://github.com/ErwinGonzalezBonilla/MyStock" target="_blank" rel="noopener">
+          <span class="em">📦</span><span class="tag wip" style="align-self:start">● En desarrollo</span>
+          <h3>MyStock</h3>
+          <p>Plataforma para pequeños negocios: inventario, punto de venta, compras y proveedores, con un asistente de IA que sugiere qué reponer.</p>
+          <span class="go">Ver proyecto →</span>
+        </a>
+        <a class="mini reveal" href="https://generador-invitaciones.vercel.app" target="_blank" rel="noopener">
+          <span class="em">🎈</span><span class="tag live" style="align-self:start">● Uso público</span>
+          <h3>Generador de invitaciones</h3>
+          <p>Crea una invitación de cumpleaños en un minuto, compártela por WhatsApp y recibe las confirmaciones. En español e inglés.</p>
+          <span class="go">Probar ahora →</span>
+        </a>
+        <a class="mini reveal" href="https://github.com/4GeeksAcademy/PatitasClub" target="_blank" rel="noopener">
+          <span class="em">🐾</span><span class="tag" style="align-self:start">Proyecto en equipo</span>
+          <h3>Patitas Club</h3>
+          <p>Tienda online de productos para mascotas con login, carrito y pagos con Stripe, desarrollada en equipo con React y Python.</p>
+          <span class="go">Ver código →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="sec" id="proceso" style="background:var(--bg2);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="kicker">Cómo trabajo</p><h2>De la idea a funcionando, sin enredos</h2></div>
+        <p>Hablas siempre con la misma persona y ves avances cada semana. Sin letra pequeña.</p>
+      </div>
+      <div class="process">
+        <div class="proc reveal"><h3>Llamada gratis</h3><p>Me cuentas tu negocio y qué te quita tiempo. Te digo qué se puede automatizar y qué no vale la pena.</p><span class="time">30 minutos</span></div>
+        <div class="proc reveal"><h3>Propuesta cerrada</h3><p>Recibes qué se va a construir, el plazo y el precio final. Sin sorpresas a mitad de camino.</p><span class="time">en 48 horas</span></div>
+        <div class="proc reveal"><h3>Construcción</h3><p>Avances semanales que puedes probar desde tu móvil. Ajustamos sobre la marcha.</p><span class="time">2 a 6 semanas</span></div>
+        <div class="proc reveal"><h3>Entrega y soporte</h3><p>Te lo dejo funcionando, te enseño a usarlo y sigo disponible para mejoras y mantención.</p><span class="time">soporte continuo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉN SOY -->
+  <section class="sec" id="sobre-mi">
+    <div class="wrap about">
+      <div class="about__img reveal">
+        <img src="/img/erwin.jpg" alt="Erwin González Bonilla, fundador de Orange Street Automation" width="640" height="640" loading="lazy">
+        <div class="about__badge"><b>15+</b>años gestionando negocios</div>
+      </div>
+      <div class="reveal">
+        <p class="kicker">Quién está detrás</p>
+        <h2>Hola, soy Erwin.</h2>
+        <p>Antes de programar <b>gestioné tiendas, inventarios, proveedores y equipos durante más de 15 años</b>, en Venezuela, Chile y España. Sé lo que es cerrar caja, cuadrar stock y contestar los mismos mensajes cien veces al día.</p>
+        <p>Por eso fundé <b>Orange Street Automation</b>: para construir las herramientas que me habría gustado tener. Hablo tu idioma, no el de los programadores, y solo te propongo lo que de verdad te ahorra tiempo o te trae clientes.</p>
+        <div class="facts">
+          <div><b>7</b><span>proyectos publicados</span></div>
+          <div><b>3</b><span>negocios reales funcionando</span></div>
+          <div><b>48 h</b><span>para tu propuesta</span></div>
+        </div>
+        <p style="margin-top:24px;font-size:15px"><a href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="/portafolio">Portafolio técnico</a> &nbsp;·&nbsp; <a href="/CV-Erwin-Gonzalez-Bonilla.pdf" target="_blank" rel="noopener">CV</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDA -->
+  <section class="wrap reveal" style="padding-bottom:110px">
+    <div class="band">
+      <div><h2>¿Cuántas horas a la semana pierdes en tareas repetitivas?</h2><p>Cuéntamelo en una llamada de 30 minutos. Si no se puede automatizar, te lo digo sin rodeos.</p></div>
+      <a class="btn" href="#contacto">Agenda una llamada gratis →</a>
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍAS -->
+  <section class="wrap reveal" style="padding-bottom:110px">
+    <p class="kicker" style="margin-bottom:18px">Herramientas con las que trabajamos</p>
+    <div class="tech"><span>n8n</span><span>Make</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>WhatsApp</span><span>React</span><span>Node.js</span><span>Python</span><span>FastAPI</span><span>Stripe</span><span>Webpay</span><span>Mercado Pago</span><span>Google Sheets</span><span>Google Calendar</span><span>PostgreSQL</span><span>Vercel</span></div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section class="sec" id="preguntas" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><p class="kicker">Preguntas frecuentes</p><h2>Lo que suelen preguntarme</h2></div></div>
+      <div class="faq reveal">
+        <details><summary>¿Cuánto cuesta un proyecto?</summary><p>Depende de lo que necesites, por eso cada propuesta tiene precio cerrado antes de empezar. Una web sencilla no cuesta lo mismo que una tienda con pagos o un asistente con IA. En la llamada gratuita te doy un rango y en 48 horas la propuesta final.</p></details>
+        <details><summary>¿Cuánto tarda?</summary><p>Una web o una automatización sencilla, entre 1 y 3 semanas. Una tienda online o un sistema a medida, entre 3 y 6 semanas. Verás avances cada semana.</p></details>
+        <details><summary>No sé nada de tecnología, ¿puedo trabajar contigo?</summary><p>Sí, para eso estoy. Te explico todo en lenguaje normal, te dejo guías paso a paso y te enseño a usar lo que construimos. Tú te encargas de tu negocio.</p></details>
+        <details><summary>¿Trabajas solo en Madrid?</summary><p>Trabajo en remoto con negocios de España, Chile y el resto de Latinoamérica. Las reuniones son por videollamada y todo se puede revisar desde el móvil.</p></details>
+        <details><summary>¿Qué pasa después de la entrega?</summary><p>Te quedas con todo: el código, el dominio y las cuentas son tuyos. Si quieres, te ofrezco un plan de mantención mensual para mejoras, cambios y soporte.</p></details>
+        <details><summary>¿Qué se puede automatizar en mi negocio?</summary><p>Lo que se repite: responder preguntas frecuentes, agendar citas, enviar recordatorios, registrar pedidos, actualizar inventario, enviar facturas o reportes. Si lo haces a mano todos los días, probablemente se puede automatizar.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="sec" id="contacto" style="background:var(--bg2);border-top:1px solid var(--line)">
+    <div class="wrap contact">
+      <div class="reveal">
+        <p class="kicker">Contacto</p>
+        <h2>Hablemos de tu <em>proyecto</em>.</h2>
+        <p class="lead">Cuéntame qué necesitas y te respondo en menos de 24 horas con los siguientes pasos.</p>
+        <div class="channels">
+          <a href="mailto:alexcultural@gmail.com?subject=Proyecto%20con%20Orange%20Street"><span class="ci">✉️</span><span><small>Correo</small>alexcultural@gmail.com</span></a>
+          <a id="waLink" href="#" target="_blank" rel="noopener" hidden><span class="ci">💬</span><span><small>WhatsApp</small><span id="waText"></span></span></a>
+          <a href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener"><span class="ci">in</span><span><small>LinkedIn</small>Erwin González Bonilla</span></a>
         </div>
       </div>
-      <div class="body">
-        <div class="meta"><span class="pill live">● Online · uso público</span><span class="pill kind">Herramienta web · ES / EN</span></div>
-        <h3>Generador de invitaciones</h3>
-        <p class="desc">Herramienta para que cualquiera cree una invitación de cumpleaños en un minuto: rellena los datos, elige un color, ve la vista previa en directo y comparte el enlace por WhatsApp. Los invitados ven la ubicación en Google Maps y confirman asistencia con un toque.</p>
-        <div class="why-title">Qué demuestra</div>
-        <ul class="why">
-          <li>De proyecto a producto: convertí una invitación hecha a mano para un cliente en una herramienta que usa cualquiera.</li>
-          <li>Sin backend ni base de datos: toda la invitación viaja en los parámetros de la URL con URLSearchParams.</li>
-          <li>Vista previa en directo, interfaz e invitaciones en español e inglés, y fechas formateadas según el idioma.</li>
-          <li>Confirmación por WhatsApp (wa.me), botón de Google Maps y copia del enlace con la API del portapapeles.</li>
-          <li><span>Datos del usuario insertados de forma segura con textContent, modo oscuro y animaciones que respetan <em>prefers-reduced-motion</em>.</span></li>
-        </ul>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>URLSearchParams</span><span>i18n ES/EN</span><span>WhatsApp</span><span>Vercel</span></div>
-        <div class="links"><a href="https://generador-invitaciones.vercel.app" target="_blank" rel="noopener">Crear una invitación ↗</a><a href="https://github.com/ErwinGonzalezBonilla/generador-invitaciones" target="_blank" rel="noopener">Código ↗</a></div>
-      </div>
-    </article>
 
-  </div>
-</section>
-
-<section id="trayectoria">
-  <div class="journey">
-    <div class="journey-intro">
-      <div class="eyebrow">Trayectoria</div>
-      <h2 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-top:8px">De gestionar operaciones a automatizarlas</h2>
-      <p>Llevo años resolviendo los problemas que hoy automatizo: control de inventario, compras, proveedores y logística entre sedes. Esa experiencia me ayuda a entender qué necesita un negocio antes de escribir la primera línea de código.</p>
-      <blockquote>Gestioné el stock de una tienda durante cuatro años. Ahora construyo el software que me habría gustado tener.</blockquote>
+      <form class="card reveal" id="leadForm" novalidate>
+        <label class="f">Tu nombre<input name="nombre" type="text" autocomplete="name" required></label>
+        <label class="f">Correo<input name="email" type="email" autocomplete="email" required></label>
+        <label class="f">WhatsApp o teléfono <span style="font-weight:400">(opcional)</span><input name="telefono" type="tel" autocomplete="tel"></label>
+        <label class="f">Nombre de tu negocio<input name="negocio" type="text" autocomplete="organization"></label>
+        <fieldset class="full"><legend>¿Qué necesitas?</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="servicios" value="Web"><span>Una web</span></label>
+            <label><input type="checkbox" name="servicios" value="Tienda online"><span>Tienda online</span></label>
+            <label><input type="checkbox" name="servicios" value="Asistente con IA"><span>Asistente con IA</span></label>
+            <label><input type="checkbox" name="servicios" value="Automatización"><span>Automatizar tareas</span></label>
+            <label><input type="checkbox" name="servicios" value="Sistema a medida"><span>Sistema a medida</span></label>
+            <label><input type="checkbox" name="servicios" value="No lo sé"><span>No lo sé, quiero consejo</span></label>
+          </div>
+        </fieldset>
+        <label class="f full">Presupuesto aproximado
+          <select name="presupuesto"><option value="">Prefiero hablarlo</option><option>Menos de 500 €</option><option>500 € a 1.500 €</option><option>1.500 € a 3.000 €</option><option>Más de 3.000 €</option></select>
+        </label>
+        <label class="f full">Cuéntame un poco<textarea name="mensaje" placeholder="Ej: tengo una peluquería y pierdo mucho tiempo contestando WhatsApp para agendar horas…" required></textarea></label>
+        <input class="hp" name="web" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="full form-foot"><small>Sin compromiso. Tus datos solo se usan para responderte.</small><button class="btn btn--orange" id="sendBtn">Enviar mensaje →</button></div>
+        <div class="msg" id="formMsg" role="status" hidden></div>
+      </form>
     </div>
-    <ol class="tl">
-      <li class="tech"><time>2026</time><h4>n8n Total: Agentes de IA y Automatización</h4><p>Udemy · Flujos automatizados y agentes con LLMs.</p></li>
-      <li class="tech"><time>02/2025 – 09/2025</time><h4>Full Stack Developer</h4><p>4Geeks Academy España · React, Python, Flask, SQL, APIs REST.</p></li>
-      <li class="tech"><time>04/2024 – 02/2025</time><h4>Desarrollador Web</h4><p>Enclave Formación · Componentes de software y publicación de webs.</p></li>
-      <li><time>2024 – actualidad</time><h4>Oficial de montaje de ventanas · Aluvega</h4><p>Madrid · Medición, ensamblaje y precisión en obra.</p></li>
-      <li><time>2018 – 2022</time><h4>Manager de tienda · The Bunny Boutique</h4><p>Santiago de Chile · Compras, inventario, proveedores, cuentas e impuestos.</p></li>
-      <li><time>2004 – 2017</time><h4>Gestión sociocultural · El Sistema</h4><p>Caracas · Inventario y distribución de instrumentos entre sedes.</p></li>
-      <li><time>2006 – 2011</time><h4>Licenciado en Gestión Sociocultural</h4><p>Universidad Central de Venezuela.</p></li>
-    </ol>
-  </div>
-</section>
+  </section>
+</main>
 
-<section id="stack">
-  <div class="sec-head"><div><div class="eyebrow">Herramientas</div><h2>Stack técnico</h2></div><p>Lo que uso en los proyectos de arriba.</p></div>
-  <div class="skills">
-    <div class="skill"><h4>IA y automatización</h4><div class="stack"><span>n8n</span><span>Make</span><span>Webhooks</span><span>Google Sheets</span><span>Google Calendar</span><span>Gmail</span><span>OpenAI API</span><span>Claude</span><span>Gemini</span><span>AI Agents</span><span>Prompt Eng.</span></div></div>
-    <div class="skill"><h4>Frontend</h4><div class="stack"><span>React</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Vite</span></div></div>
-    <div class="skill"><h4>Backend</h4><div class="stack"><span>Python</span><span>Flask</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>APIs REST</span><span>JWT</span></div></div>
-    <div class="skill"><h4>Datos y deploy</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>SQLAlchemy</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>Cloudinary</span></div></div>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="/img/logo.svg" alt="" width="32" height="32"><span><b style="font-size:17px">Orange Street</b><small>Automation</small></span></a>
+    <nav aria-label="Pie"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#proceso">Cómo trabajo</a><a href="#contacto">Contacto</a><a href="/portafolio">Portafolio técnico</a></nav>
+    <span>© 2026 Orange Street Automation · Madrid · Remoto</span>
   </div>
-</section>
+</footer>
 
-<section id="contacto">
-  <div class="contact">
-    <div>
-      <div class="eyebrow">Contacto</div>
-      <h2>¿Hablamos?</h2>
-      <p>Busco mi primer puesto en automatización con IA o como desarrollador Full Stack, en Madrid o en remoto. ¿Tienes un proceso que se repite cada día? Probablemente se puede automatizar. Español nativo, inglés B1.</p>
-    </div>
-    <div class="c-list">
-      <div class="c-item"><div><small>Email</small><span id="mail">alexcultural@gmail.com</span></div><button type="button" id="copyMail">Copiar</button></div>
-      <div class="c-item"><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/erwingonzalezbonilla" target="_blank" rel="noopener">linkedin.com/in/erwingonzalezbonilla ↗</a></div></div>
-      <div class="c-item"><div><small>Currículum</small><a href="CV-Erwin-Gonzalez-Bonilla.pdf" target="_blank" rel="noopener">CV en PDF ↗</a></div></div>
-      <div class="c-item"><div><small>GitHub</small><a href="https://github.com/ErwinGonzalezBonilla" target="_blank" rel="noopener">github.com/ErwinGonzalezBonilla ↗</a></div></div>
-      <div class="c-item"><div><small>Ubicación</small><span>Madrid, España</span></div></div>
-    </div>
-  </div>
-</section>
-
-<footer><span>© 2026 Erwin A. González Bonilla</span><span>Hecho con HTML, CSS y JavaScript</span></footer>
-</div>
+<a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" hidden><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.3 3.6 5.7 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.4z"/></svg></a>
 
 <script>
-document.getElementById('copyMail').addEventListener('click',function(){
-  var b=this,t=document.getElementById('mail').textContent;
-  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Seleccionado';}
-  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copiado ✓';setTimeout(function(){b.textContent='Copiar'},1800)},sel)}catch(e){sel()}
-});
-</script>
+/* Número de WhatsApp de la agencia con código de país, solo dígitos (ej: "34600000000"). Vacío = se ocultan los botones de WhatsApp. */
+var WHATSAPP = "";
 
+(function(){
+  // WhatsApp
+  if (WHATSAPP) {
+    var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Orange Street, quiero información para mi negocio.");
+    ["waLink","waFloat"].forEach(function(id){ var a=document.getElementById(id); a.href=url; a.hidden=false; });
+    document.getElementById("waText").textContent = "+" + WHATSAPP;
+  }
+
+  // Barra superior con borde al bajar
+  var top = document.getElementById("top");
+  addEventListener("scroll", function(){ top.classList.toggle("scrolled", scrollY > 10); }, { passive: true });
+
+  // Aparición de secciones
+  var els = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function(el){ io.observe(el); });
+  } else els.forEach(function(el){ el.classList.add("in"); });
+
+  // Flujo animado de la portada
+  var steps = document.querySelectorAll(".flow .step"), i = 0;
+  function tick(){
+    if (i < steps.length) { steps[i].classList.add("on"); var s = steps[i]; setTimeout(function(){ s.classList.add("done"); }, 650); i++; setTimeout(tick, 1100); }
+    else setTimeout(function(){ steps.forEach(function(s){ s.classList.remove("on","done"); }); i = 0; tick(); }, 3200);
+  }
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) steps.forEach(function(s){ s.classList.add("on","done"); }); else setTimeout(tick, 500);
+
+  // Formulario de contacto
+  var form = document.getElementById("leadForm"), msg = document.getElementById("formMsg"), btn = document.getElementById("sendBtn");
+  function show(type, html){ msg.className = "msg " + type; msg.innerHTML = html; msg.hidden = false; }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var fd = new FormData(form);
+    var data = { nombre: fd.get("nombre").trim(), email: fd.get("email").trim(), telefono: fd.get("telefono").trim(), negocio: fd.get("negocio").trim(),
+      servicios: fd.getAll("servicios"), presupuesto: fd.get("presupuesto"), mensaje: fd.get("mensaje").trim(), web: fd.get("web") };
+    if (data.nombre.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email) || data.mensaje.length < 5) { show("err", "Completa tu nombre, un correo válido y cuéntame qué necesitas."); return; }
+    var mailto = "mailto:alexcultural@gmail.com?subject=" + encodeURIComponent("Proyecto: " + (data.negocio || data.nombre)) + "&body=" + encodeURIComponent(
+      "Nombre: " + data.nombre + "\nCorreo: " + data.email + "\nTeléfono: " + data.telefono + "\nNegocio: " + data.negocio + "\nNecesito: " + data.servicios.join(", ") + "\nPresupuesto: " + (data.presupuesto || "Prefiero hablarlo") + "\n\n" + data.mensaje);
+    btn.disabled = true; btn.textContent = "Enviando…";
+    fetch("/api/contacto", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok: r.ok, j: j }; }); })
+      .then(function(res){
+        if (res.ok) { form.reset(); show("ok", "¡Mensaje enviado! Te respondo en menos de 24 horas a " + data.email.replace(/</g, "&lt;") + "."); }
+        else show("err", "No se pudo enviar desde aquí. <a href=\"" + mailto + "\">Envíamelo por correo con un clic</a> y te respondo igual.");
+      })
+      .catch(function(){ show("err", "Sin conexión. <a href=\"" + mailto + "\">Envíamelo por correo</a> y te respondo igual."); })
+      .then(function(){ btn.disabled = false; btn.textContent = "Enviar mensaje →"; });
+  });
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+{
+  "name": "orange-street-automation",
+  "private": true,
+  "description": "Web de la agencia Orange Street Automation",
+  "dependencies": { "nodemailer": "^10.0.0" }
+}
