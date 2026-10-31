@@ -17,13 +17,14 @@ module.exports = async (req, res) => {
   };
   if (d.nombre.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email) || d.mensaje.length < 5)
     return res.status(400).json({ error: "Completa nombre, correo y mensaje." });
+  if (b.acepta !== true) return res.status(400).json({ error: "Debes aceptar la política de privacidad." });
 
   const { SMTP_HOST, SMTP_PORT = "465", SMTP_USER, SMTP_PASS } = process.env;
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) return res.status(503).json({ error: "Correo no configurado." });
   const to = process.env.CONTACT_TO || SMTP_USER;
 
   const rows = [["Nombre", d.nombre], ["Correo", d.email], ["Teléfono", d.telefono], ["Negocio", d.negocio],
-    ["Necesita", d.servicios.join(", ")], ["Presupuesto", d.presupuesto || "Prefiere hablarlo"]];
+    ["Necesita", d.servicios.join(", ")], ["Presupuesto", d.presupuesto || "—"], ["Privacidad", "Aceptada"]];
   const html = `<div style="font-family:Arial,sans-serif;max-width:560px">
     <h2 style="color:#FF6A1A;margin:0 0 12px">Nuevo contacto desde la web</h2>
     <table style="border-collapse:collapse;width:100%">${rows.map(([k, v]) => `<tr><td style="padding:6px 10px 6px 0;color:#777;white-space:nowrap">${k}</td><td style="padding:6px 0"><b>${esc(v) || "—"}</b></td></tr>`).join("")}</table>

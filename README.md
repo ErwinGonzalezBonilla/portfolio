@@ -6,6 +6,7 @@ Sitio estático (HTML + CSS + JavaScript) con una función de Vercel para el for
 
 - `index.html`: web de la agencia
 - `portafolio.html`: portafolio técnico (se ve en `/portafolio`)
+- `aviso-legal.html`, `privacidad.html`, `cookies.html`: páginas legales
 - `api/contacto.js`: envía al correo cada mensaje del formulario
 - `img/`: logo, imagen para compartir en redes y foto
 - `CV-Erwin-Gonzalez-Bonilla.pdf`: currículum
@@ -24,6 +25,19 @@ En Vercel → Settings → Environment Variables agrega:
 
 Sin estas variables el formulario igual funciona: ofrece enviar el mensaje con el programa de correo del visitante.
 
-## WhatsApp
+## Configuración (WhatsApp, redes, precios y medición)
 
-En `index.html`, busca `var WHATSAPP = ""` y escribe tu número con código de país, solo dígitos (por ejemplo `34600000000`). Aparecerán el botón flotante y el enlace en contacto.
+En `index.html`, al final, edita el bloque `CONFIG`:
+
+- `whatsapp`: número con código de país, solo dígitos (ej. `34600000000`). Activa el botón flotante y el de contacto.
+- `instagram`, `tiktok`: usuario sin @. Aparecen en el pie.
+- `precios`: textos como `"Desde 400 €"`. Vacíos = "Cerrado tras la llamada".
+- `medicion`: IDs de Google Analytics, píxel de Meta y píxel de TikTok. Solo se cargan si el visitante acepta las cookies; el banner aparece únicamente si configuras alguno.
+
+## Páginas legales
+
+`aviso-legal.html`, `privacidad.html` y `cookies.html` son plantillas: completa todo lo marcado como [REVISAR].
+
+## Testimonios
+
+La sección `#testimonios` está oculta (`hidden`). Cuando tengas testimonios reales, quita `hidden` y reemplaza los textos [PENDIENTE].
