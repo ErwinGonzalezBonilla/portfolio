@@ -115,6 +115,10 @@ section{margin-bottom:96px}
 .links a{font-weight:600;font-size:.92rem;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px}
 .links a:hover{color:var(--accent)}
 .commits{font:500 .78rem var(--mono);color:var(--muted)}
+.demo-access{margin:-4px 0 0;font:500 .76rem/1.5 var(--mono);color:var(--muted);overflow-wrap:anywhere}
+.demo-access b{color:var(--ink);font-weight:600}
+.soon{margin:0;font-size:.88rem;color:var(--muted)}
+.soon b{font:600 .72rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink);margin-right:6px}
 
 /* ---- Mockups (each one imitates its own site, so it keeps its own colors in both themes) ---- */
 /* MyStock */
@@ -132,9 +136,11 @@ section{margin-bottom:96px}
 .ms-chart{background:#fff;border-radius:6px;padding:4%;display:flex;align-items:flex-end;gap:3%;height:clamp(40px,9vw,110px);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .ms-chart i{flex:1;background:#14213D;border-radius:2px 2px 0 0}
 .ms-chart i:nth-child(odd){background:#FCA311}
-.ms-chat{background:#fff;border-radius:6px;padding:3% 4%;display:flex;flex-direction:column;gap:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:clamp(6px,.85vw,10px)}
-.ms-chat .q{align-self:flex-end;background:#14213D;color:#fff;padding:4px 8px;border-radius:8px 8px 2px 8px}
-.ms-chat .a{align-self:flex-start;background:#FFF3DC;padding:4px 8px;border-radius:8px 8px 8px 2px}
+.ms-low{background:#fff;border-radius:6px;padding:3% 4%;display:flex;flex-direction:column;gap:5px;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:clamp(6px,.85vw,10px);color:#14213D}
+.ms-low b{font-size:clamp(6px,.9vw,10px)}
+.ms-low span{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #EEF1F6;padding-top:4px}
+.ms-low em{font-style:normal;font-weight:700;color:#B7791F}
+.ms-low em.out{color:#D64545}
 /* Ballonette */
 .bl{height:100%;background:linear-gradient(160deg,#FFF5F7,#FCE4EC);display:flex;flex-direction:column}
 .bl-nav{display:flex;justify-content:space-between;align-items:center;padding:3% 5%;font-size:clamp(6px,.9vw,10px);color:#9C4A63}
@@ -316,14 +322,14 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
 <div class="stats">
   <div class="stat"><b>138</b><span>contribuciones en GitHub en 2026</span></div>
   <div class="stat"><b>6</b><span>proyectos publicados</span></div>
-  <div class="stat"><b>2</b><span>webs en producción en Vercel</span></div>
+  <div class="stat"><b>4</b><span>webs en producción</span></div>
   <div class="stat"><b>15+</b><span>años gestionando operaciones</span></div>
 </div>
 
 <section id="proyectos">
   <div class="sec-head">
     <div><div class="eyebrow">Portfolio</div><h2>Proyectos</h2></div>
-    <p>Seis proyectos: un flujo de automatización con n8n, un SaaS con IA en desarrollo, dos webs entregadas a clientes reales con dominio propio (una con venta de entradas y pagos con Stripe), un proyecto en equipo y una herramienta pública para crear invitaciones.</p>
+    <p>Seis proyectos: un flujo de automatización con n8n, un SaaS de inventario publicado con demo, dos webs entregadas a clientes reales con dominio propio (una con venta de entradas y pagos con Stripe), un proyecto en equipo y una herramienta pública para crear invitaciones.</p>
   </div>
 
   <div class="projects">
@@ -384,34 +390,38 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
     <article class="card featured">
       <div class="preview">
         <div class="browser" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">mystock · panel de inventario</span></div>
+          <div class="bar"><i></i><i></i><i></i><span class="url">mystock · Bella Cosmética</span></div>
           <div class="screen"><div class="ms">
             <div class="ms-side"><b>MyStock</b><s class="on"></s><s></s><s></s><s></s><s></s></div>
             <div class="ms-main">
               <div class="ms-kpis">
-                <div class="ms-kpi"><small>Ventas hoy</small><strong>1.284 €</strong></div>
-                <div class="ms-kpi"><small>Productos</small><strong>342</strong></div>
-                <div class="ms-kpi low"><small>Stock bajo</small><strong>7</strong></div>
+                <div class="ms-kpi"><small>Ventas hoy</small><strong>142,85 €</strong></div>
+                <div class="ms-kpi"><small>Productos</small><strong>30</strong></div>
+                <div class="ms-kpi low"><small>Stock bajo</small><strong>4</strong></div>
               </div>
               <div class="ms-chart"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:92%"></i><i style="height:70%"></i></div>
-              <div class="ms-chat"><span class="q">¿Qué productos debo reponer esta semana?</span><span class="a">🤖 7 productos bajo mínimo. Te propongo un pedido a 2 proveedores…</span></div>
+              <div class="ms-low"><b>Stock bajo</b><span>Eau de parfum floral 100 ml<em class="out">Agotado</em></span><span>Sérum facial vitamina C 30 ml<em>2 uds</em></span></div>
             </div>
           </div></div>
         </div>
       </div>
       <div class="body">
-        <div class="meta"><span class="pill wip">● En desarrollo</span><span class="pill kind">SaaS · IA</span><span class="commits">85 commits</span></div>
+        <div class="meta"><span class="pill live">● Publicado · SaaS</span><span class="pill kind">Producto propio · Full stack</span><span class="commits">108 commits</span></div>
         <h3>MyStock</h3>
-        <p class="desc">Plataforma SaaS multiempresa para que pequeños negocios gestionen inventario, punto de venta, compras, ventas, clientes y proveedores desde un solo sitio, con un asistente de IA que sugiere qué reponer y automatizaciones con n8n para las tareas repetitivas.</p>
+        <p class="desc">SaaS multiempresa para pequeños negocios: inventario, punto de venta con lector de código de barras o SKU, compras, ventas, clientes, proveedores, usuarios con 4 roles, informes y dashboard.</p>
         <div class="why-title">Qué demuestra</div>
         <ul class="why">
-          <li>Arquitectura completa por capas: React → FastAPI → SQLAlchemy → PostgreSQL → servicios de IA → n8n.</li>
-          <li>Diseño multi-tenant, autenticación JWT y despliegue planificado en Vercel + Railway.</li>
-          <li>Proyecto tratado como producto: documentación, roadmap, changelog, guía de contribución y licencia.</li>
-          <li>Conoce el problema desde dentro: años gestionando inventario y proveedores en tienda.</li>
+          <li>Multiempresa con aislamiento de datos por empresa: cada negocio solo ve lo suyo.</li>
+          <li>Autenticación JWT y permisos por rol aplicados en el backend y reflejados en el frontend.</li>
+          <li>Esquema de base de datos versionado con Flask-Migrate sobre PostgreSQL.</li>
+          <li>En producción: backend y base de datos en Railway, frontend en Vercel, con healthcheck y configuración por variables de entorno.</li>
+          <li>56 tests de backend.</li>
+          <li>Conozco el problema desde dentro: gestioné el stock de una tienda durante años.</li>
         </ul>
-        <div class="stack"><span>React</span><span>Vite</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>JWT</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>n8n</span></div>
-        <div class="links"><a href="https://github.com/ErwinGonzalezBonilla/MyStock" target="_blank" rel="noopener">Código en GitHub ↗</a></div>
+        <p class="soon"><b>Próximamente</b>Asistente de IA y automatizaciones con n8n. Todavía no están disponibles.</p>
+        <div class="stack"><span>React</span><span>Vite</span><span>Flask</span><span>SQLAlchemy</span><span>Flask-Migrate</span><span>PostgreSQL</span><span>JWT</span><span>Gunicorn</span><span>Railway</span><span>Vercel</span></div>
+        <div class="links"><a href="https://my-stock-woad.vercel.app" target="_blank" rel="noopener">Probar demo ↗</a><a href="https://github.com/ErwinGonzalezBonilla/MyStock" target="_blank" rel="noopener">Código ↗</a></div>
+        <p class="demo-access">Acceso demo: <b>carmen@bellacosmetica.example</b> / <b>1234Qwer</b></p>
       </div>
     </article>
 
@@ -583,10 +593,10 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
 <section id="stack">
   <div class="sec-head"><div><div class="eyebrow">Herramientas</div><h2>Stack técnico</h2></div><p>Lo que uso en los proyectos de arriba.</p></div>
   <div class="skills">
-    <div class="skill"><h4>IA y automatización</h4><div class="stack"><span>n8n</span><span>Make</span><span>Webhooks</span><span>Google Sheets</span><span>Gmail</span><span>OpenAI API</span><span>Claude</span><span>Gemini</span><span>AI Agents</span><span>Prompt Eng.</span></div></div>
+    <div class="skill"><h4>IA y automatización</h4><div class="stack"><span>n8n</span><span>Make</span><span>Webhooks</span><span>Google Sheets</span><span>Gmail</span><span>OpenAI API</span><span>Claude</span><span>AI Agents</span><span>Prompt Eng.</span></div></div>
     <div class="skill"><h4>Frontend</h4><div class="stack"><span>React</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Vite</span></div></div>
-    <div class="skill"><h4>Backend</h4><div class="stack"><span>Python</span><span>Flask</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>APIs REST</span><span>JWT</span></div></div>
-    <div class="skill"><h4>Datos y deploy</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>SQLAlchemy</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>Cloudinary</span></div></div>
+    <div class="skill"><h4>Backend</h4><div class="stack"><span>Python</span><span>Flask</span><span>Node.js</span><span>APIs REST</span><span>JWT</span><span>Flask-Migrate</span><span>Gunicorn</span></div></div>
+    <div class="skill"><h4>Datos y deploy</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>SQLAlchemy</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>Railway</span><span>Cloudinary</span></div></div>
   </div>
 </section>
 
